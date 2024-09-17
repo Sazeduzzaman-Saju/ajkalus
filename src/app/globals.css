@@ -1,0 +1,18 @@
+/* Font Style Linked */
+@import url("https://fonts.maateen.me/solaiman-lipi/font.css");
+/* Jost Font For English */
+
+/* Root Style */
+:root {
+  --main: #165588;
+  --secondary: #dc2329;
+  --white: white;
+  --black: black;
+  --red: red;
+}
+body {
+  font-family: SolaimanLipi, sans-serif;
+}
+a {
+  text-decoration: none;
+}

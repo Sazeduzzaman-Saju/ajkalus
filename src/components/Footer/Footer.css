@@ -1,0 +1,89 @@
+.footer-devider {
+  border-top: 3px solid var(--secondary);
+  width: 3.125rem;
+}
+
+.footer-links {
+  font-family: ;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  line-height: 24px;
+  transition: color 0.3s; /* Add a smooth transition for the color change */
+}
+
+.sompadok {
+  font-family: math;
+}
+.footer-social a {
+  background-color: var(--main);
+  margin-left: 0.625rem;
+  border-radius: 50%;
+  height: 0.625rem;
+  width: 1.25rem;
+  padding: 7px 8px 8px;
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--white);
+  transition: 0.5s ease-in;
+}
+.footer-social a:hover {
+  background-color: var(--main);
+  margin-left: 0.625rem;
+  border-radius: 50%;
+  height: 0.625rem;
+  width: 1.25rem;
+  padding: 7px 8px 8px;
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--secondary);
+  transition: 0.5s ease-in;
+}
+.main_footer {
+  background-color: #000000;
+}
+.footer-brand {
+  border-top: 1px solid #030303;
+  border-bottom: 1px solid #030303;
+}
+.footer-ct-btn {
+  border-bottom: 2px solid transparent !important;
+}
+.footer-ct-btn:hover {
+  border-bottom: 2px solid var(--main) !important;
+}
+
+/* For Small Device */
+@media (max-width: 768px) {
+  .footer-apps-box {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .footer-devider {
+    margin: auto;
+  }
+  .footer-apps-box-img {
+    display: flex;
+    justify-content: center;
+  }
+  .main_author {
+    text-align: center;
+  }
+  .footer-logo-box {
+    width: 100% !important;
+    background: rgb(255, 255, 255) !important;
+    padding: 8px 24px 11px 16px !important;
+    margin: 8px !important;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .play-app-icons {
+    display: flex;
+  }
+  .border-devider {
+    position: relative;
+    left: 0%;
+  }
+}
