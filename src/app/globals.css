@@ -36,6 +36,12 @@ body::-webkit-scrollbar-thumb {
 a {
   text-decoration: none !important;
 }
-.text-side{
+.text-site{
   color: var(--main);
+}
+.text-site-two{
+  color: var(--secondary);
+}
+p{
+  margin-bottom: 0;
 }

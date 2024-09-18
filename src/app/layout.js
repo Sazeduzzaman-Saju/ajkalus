@@ -9,7 +9,6 @@ import Footer from "@/components/Footer/Footer";
 import { useRouter } from "next/navigation"; // Updated import for useRouter
 import "./globals.css";
 
-
 export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init({
@@ -18,21 +17,21 @@ export default function RootLayout({ children }) {
     });
   }, []); // Empty dependency array ensures this runs only once after initial render
 
-  function ScrollToTop() {
-    const { asPath } = useRouter();
+  // function ScrollToTop() {
+  //   const { asPath } = useRouter();
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [asPath]);
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, [asPath]);
 
-    return null;
-  }
+  //   return null;
+  // }
 
   return (
     <html lang="bn">
       <body>
         <Header /> {/* Header at the top */}
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <main className="">
           {children} {/* Dynamic content in the middle */}
         </main>

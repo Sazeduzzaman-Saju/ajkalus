@@ -44,7 +44,7 @@ const NavMenu = () => {
   return (
     <ul className="navbar-nav mx-auto d-flex">
       {/* Render dynamic navigation links */}
-      {loading ? (
+      {/* {loading ? (
         <li className="nav-item">Loading...</li>
       ) : error ? (
         <li className="nav-item">Error: {error}</li>
@@ -58,14 +58,14 @@ const NavMenu = () => {
         ))
       ) : (
         <li className="nav-item">No navigation links available</li>
-      )}
+      )} */}
 
       {/* Under dropdown show The Extra Menu */}
-      {extraNav.length > 0 && (
+      {/* {extraNav.length > 0 && (
         <li className="nav-item menu-specing dropdown">
           <MenuDropdown extraNav={extraNav} />
         </li>
-      )}
+      )} */}
     </ul>
   );
 };

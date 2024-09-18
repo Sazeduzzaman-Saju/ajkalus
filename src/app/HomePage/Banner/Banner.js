@@ -7,6 +7,7 @@ import {
   Scrollbar,
   A11y,
   Autoplay,
+  EffectFade // Import EffectFade
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./Banner.css";
@@ -15,6 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
+import "swiper/css/effect-fade"; // Import effect-fade CSS
 import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css"; // Optional: to include default skeleton styles
@@ -65,7 +67,7 @@ const Banner = () => {
         </div>
       ) : (
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
           spaceBetween={0}
           slidesPerView={1}
           loop={true}
@@ -77,6 +79,8 @@ const Banner = () => {
               updateProgressBar(progress); // Update the progress bar
             },
           }}
+          effect="fade" // Set the effect to fade
+          speed={1000} // Adjust the speed of the fade transition
         >
           {bannerData.map((item) => (
             <SwiperSlide key={item.id}>

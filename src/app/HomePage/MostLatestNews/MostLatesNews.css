@@ -1,0 +1,33 @@
+/* components/LatestNews/LatestNews.module.css */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.card-body {
+  flex: 1; /* Ensure the body takes up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out title and content */
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  flex-grow: 1; /* Allow text to take up available space */
+}
+.sidebar-img {
+  height: 130px;
+  padding-right: 0;
+}
+.sidebar-cont {
+  padding: 8px;
+  padding-left: 0;
+}
