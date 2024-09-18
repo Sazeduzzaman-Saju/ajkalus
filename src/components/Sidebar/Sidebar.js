@@ -1,9 +1,10 @@
 import React from 'react';
+import SectionHeader from '../SectionHeader/SectionHeader';
 
 const Sidebar = () => {
     return (
         <div>
-            This is sidebar
+            <SectionHeader title='বিজ্ঞাপন কর্নার।'/>
         </div>
     );
 };

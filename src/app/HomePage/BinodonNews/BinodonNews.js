@@ -1,30 +1,50 @@
-import React from "react";
+"use client"; // Add this directive at the top
+
+import React, { useState, useEffect } from "react";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import Image from "next/image";
 
 // Utility function to limit the number of words in a string
 const truncateText = (text, wordLimit) => {
   const words = text.split(" ");
-  return words.length > wordLimit
-    ? words.slice(0, wordLimit).join(" ") + ""
-    : text;
+  return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
 };
 
-const BinodonNews = async () => {
-  // Server-side data fetching
-  const response = await fetch("https://backoffice.ajkal.us/category-news/7");
-  const result = await response.json();
+const BinodonNews = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Access the `data` array from the result
-  const data = result.data || [];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://backoffice.ajkal.us/category-news/7");
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const result = await response.json();
+        setData(result.data || []);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  // Filter data based on 'is_featured' value
-  const featured1 = Array.isArray(data)
-    ? data.filter((item) => item.is_featured === 1)
-    : [];
-  const featured2 = Array.isArray(data)
-    ? data.filter((item) => item.is_featured === 2).slice(0, 6) // Limit to 6 items
-    : [];
+    fetchData();
+  }, []);
+
+  const featured1 = data.filter((item) => item.is_featured === 1);
+  const featured2 = data.filter((item) => item.is_featured === 2).slice(0, 6);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
   return (
     <div className="container">
       <SectionHeader title="বিনোদন" />
@@ -35,30 +55,19 @@ const BinodonNews = async () => {
               <div key={item.id} className="featured-item">
                 <div className="card border-0 shadow-sm">
                   <div className="card-body p-0">
-                    <div className="">
-                      <Image
-                        className="img-fluid w-100"
-                        src={`https://ajkal.us/img/news/${item.title_img}`}
-                        alt={item.news_title}
-                        layout="responsive"
-                        width={700} // Set a base width, it will scale with the container
-                        height={600} // Set a base height, it will scale with the container
-                        placeholder="blur"
-                        blurDataURL="https://ajkal.us/img/settings/placeholder.jpg"
-                      />
-                    </div>
+                    <Image
+                      className="img-fluid w-100"
+                      src={`https://ajkal.us/img/news/${item.title_img}`}
+                      alt={item.news_title}
+                      layout="responsive"
+                      width={700}
+                      height={600}
+                      placeholder="blur"
+                      blurDataURL="https://ajkal.us/img/settings/placeholder.jpg"
+                    />
                     <div className="p-3 pt-4 feature-binodon">
-                      <h5
-                        dangerouslySetInnerHTML={{
-                          __html: item.news_title,
-                        }}
-                      ></h5>
-                      <p
-                        className="pt-3`"
-                        dangerouslySetInnerHTML={{
-                          __html: item.news_short_brief,
-                        }}
-                      ></p>
+                      <h5 dangerouslySetInnerHTML={{ __html: item.news_title }}></h5>
+                      <p className="pt-3" dangerouslySetInnerHTML={{ __html: item.news_short_brief }}></p>
                     </div>
                   </div>
                 </div>
@@ -75,30 +84,19 @@ const BinodonNews = async () => {
                 <div className="col-md-4 mb-4" key={item.id}>
                   <div className="card border-0 shadow-sm">
                     <div className="card-body p-0">
-                      <div className="featured-item">
-                        <Image
-                          className="img-fluid"
-                          src={`https://ajkal.us/img/news/${item.title_img}`}
-                          alt={item.news_title}
-                          layout="responsive"
-                          width={600} // Set a base width, it will scale with the container
-                          height={400} // Set a base height, it will scale with the container
-                          placeholder="blur"
-                          blurDataURL="https://ajkal.us/img/settings/placeholder.jpg"
-                        />
-                        <div className="p-3">
-                          <h6
-                            className=""
-                            dangerouslySetInnerHTML={{
-                              __html: truncateText(item.news_title, 4),
-                            }}
-                          ></h6>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html: truncateText(item.news_short_brief, 6),
-                            }}
-                          ></p>
-                        </div>
+                      <Image
+                        className="img-fluid"
+                        src={`https://ajkal.us/img/news/${item.title_img}`}
+                        alt={item.news_title}
+                        layout="responsive"
+                        width={600}
+                        height={400}
+                        placeholder="blur"
+                        blurDataURL="https://ajkal.us/img/settings/placeholder.jpg"
+                      />
+                      <div className="p-3">
+                        <h5 dangerouslySetInnerHTML={{ __html: truncateText(item.news_title, 4) }}></h5>
+                        <p dangerouslySetInnerHTML={{ __html: truncateText(item.news_short_brief, 6) }}></p>
                       </div>
                     </div>
                   </div>

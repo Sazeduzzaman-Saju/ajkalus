@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+"use client";
+import   { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import axios from "axios";
 import Link from "next/link";

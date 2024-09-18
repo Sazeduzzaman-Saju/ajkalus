@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
-import styles from "./SectionHeader.css"; // or './sectionHeader.css' if not using CSS Modules
+import './SectionHeader.css';
 
-const SectionHeader = ({ title }) => {
+const SectionHeader = ({ title = "Default Title" }) => {
   const [imgSrc, setImgSrc] = useState(
     "https://ajkal.us/img/settings/Asset-2.png"
   );
@@ -19,7 +19,7 @@ const SectionHeader = ({ title }) => {
   return (
     <div className="post-header-box mt-4">
       <div className="post-header-title text-white">
-        <div className="">
+        <div>
           <Image
             className="pe-2"
             src={imgSrc}
@@ -39,10 +39,6 @@ const SectionHeader = ({ title }) => {
 
 SectionHeader.propTypes = {
   title: PropTypes.string.isRequired,
-};
-
-SectionHeader.defaultProps = {
-  title: "Default Title",
 };
 
 export default SectionHeader;

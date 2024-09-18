@@ -6,7 +6,6 @@ import "aos/dist/aos.css"; // Import AOS CSS
 import { useEffect } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { useRouter } from "next/navigation"; // Updated import for useRouter
 import "./globals.css";
 
 export default function RootLayout({ children }) {

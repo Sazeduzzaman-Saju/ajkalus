@@ -26,9 +26,19 @@
   height: 50px;
 }
 .feature-binodon {
-  height: 245px;
+  height: 265px;
   max-height: 100%;
 }
+h5{
+  color: var(--main) !important;
+}
+@media screen and (max-width: 1444px) {
+  .feature-binodon {
+    height: 265px;
+    max-height: 100%;
+  }
+}
+
 @media screen and (max-width: 575.98px) {
   .cts-text {
     height: 10px;

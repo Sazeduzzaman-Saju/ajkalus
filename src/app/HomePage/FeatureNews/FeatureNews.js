@@ -1,5 +1,5 @@
-"use client";
-import React, { useEffect, useState } from "react";
+"use client"
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Skeleton from "react-loading-skeleton";
@@ -71,7 +71,6 @@ const FeatureNewsComponent = () => {
             768: { slidesPerView: 3 },
             992: { slidesPerView: 3 },
           }}
-          loopedSlides={4} // Sets the number of slides to be looped (adjust if needed)
         >
           {spotlightNews.map((data, index) => (
             <SwiperSlide key={index}>
@@ -83,7 +82,6 @@ const FeatureNewsComponent = () => {
                     </div>
                     <div className="text-site feature-titels pt-2 fs-5 mb-3">
                       {data.news_title.split(" ").slice(0, 8).join(" ")}
-                      {/* {data.news_title} */}
                     </div>
                     <div
                       className="card-text cts-text text-muted pt-0 pt-md-3"
@@ -120,16 +118,10 @@ const FeatureNewsComponent = () => {
   );
 };
 
-// Memoize the FeatureNewsComponent
-const MemoizedFeatureNews = React.memo(FeatureNewsComponent);
-
-// Set the display name for better debugging
-MemoizedFeatureNews.displayName = "FeatureNews";
-
 const FeatureNews = () => {
   return (
     <div className="container">
-      <MemoizedFeatureNews />
+      <FeatureNewsComponent />
     </div>
   );
 };
