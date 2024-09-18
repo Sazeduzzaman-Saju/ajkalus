@@ -1,13 +1,14 @@
 "use client"; // Mark this component as a Client Component
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos"; // Import AOS library
 import "aos/dist/aos.css"; // Import AOS CSS
 import { useEffect } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { useRouter } from "next/navigation"; // Updated import for useRouter
-import './globals.css'
+import "./globals.css";
+
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header /> {/* Header at the top */}
         <ScrollToTop />
-        <main className="container my-5">
+        <main className="">
           {children} {/* Dynamic content in the middle */}
         </main>
         <Footer /> {/* Footer at the bottom */}

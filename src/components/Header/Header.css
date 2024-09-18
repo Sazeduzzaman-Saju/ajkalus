@@ -42,13 +42,6 @@
   width: 15.625rem;
   height: 3.125rem;
 }
-.navbar-sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #ffffff; /* Set the background color of the sticky navbar */
-}
 .navbar-nav {
   flex-direction: row;
 }
@@ -110,6 +103,9 @@
 }
 
 /* Top Bar Styles */
+.drop-menus-items a{
+  color: #242323;
+}
 .menu-specing {
   padding-right: 18px;
   padding-left: 18px;
@@ -118,11 +114,11 @@
   border-right: 1px solid;
 }
 .top-bar-area {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--white);
 }
 .nav-link {
-  font-size: 15px;
+  font-size: 18px;
 }
 .top-bar ul {
   display: flex;
@@ -174,7 +170,7 @@
   border-radius: 50%;
   height: 1.25rem;
   width: 1.25rem;
-  padding: 6px 6px;
+  padding: 3px 7px;
   font-size: 0.875rem;
   text-align: center;
   color: var(--main);
@@ -207,6 +203,12 @@
 
 /* Mobile Adjustments */
 @media screen and (max-width: 575.98px) {
+  .mobile-triger {
+    width: 100%;
+  }
+  .mobile-none {
+    display: none;
+  }
   .top-bar-area,
   .search-container {
     display: none !important;

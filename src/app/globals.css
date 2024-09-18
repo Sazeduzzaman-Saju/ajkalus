@@ -1,7 +1,13 @@
 /* Font Style Linked */
-@import url("https://fonts.maateen.me/solaiman-lipi/font.css");
-/* Jost Font For English */
-
+@font-face {
+  font-family: "AdorshoLipi";
+  src: url("./AdorshoLipi/AdorshoLipi.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "AdorshoLipi", sans-serif;
+}
 /* Root Style */
 :root {
   --main: #165588;
@@ -10,9 +16,26 @@
   --black: black;
   --red: red;
 }
-body {
-  font-family: SolaimanLipi, sans-serif;
-}
+
 a {
   text-decoration: none;
+}
+/* Scrool Bar Css */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main);
+  outline: 1px solid var(--main);
+}
+a {
+  text-decoration: none !important;
+}
+.text-side{
+  color: var(--main);
 }
