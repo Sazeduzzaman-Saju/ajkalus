@@ -110,7 +110,7 @@
   color: #eee;
   font-size: 20px !important;
 }
-.swiper-button-prev,
+/* .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
   left: 0 !important;
   right: 0;
@@ -119,7 +119,7 @@
 .swiper-rtl .swiper-button-prev {
   left: 0;
   right: 0 !important;
-}
+} */
 @media (max-width: 576px) {
   .banner-content {
     max-width: 540px;

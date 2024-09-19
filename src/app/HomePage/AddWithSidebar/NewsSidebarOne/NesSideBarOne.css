@@ -7,14 +7,42 @@
     #165588 100%
   );
 }
-
+.title-cards {
+  height: 85px !important;
+}
 .side-bar-cards {
-  height: 265px !important;
+  height: 290px !important;
   max-height: 100%;
+}
+.hover-image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hover-image {
+  width: 200px;
+  height: 150px;
+}
+.feature-khela {
+  height: 495px !important;
+  object-fit: cover;
+}
+.news-sidebar-card {
+  height: 360px !important;
+}
+.sakkhatkar-card {
+  height: 250px !important;
+}
+.sakkhatkar-card img {
+  width: 100%;
+  object-fit: contain;
+  height: 160px;
 }
 @media screen and (max-width: 1444px) {
   .side-bar-cards {
-    height: 265px;
+    height: 290px !important;
     max-height: 100%;
   }
 }

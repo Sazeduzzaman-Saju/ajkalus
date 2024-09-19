@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import Image from "next/image";
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'; // Import skeleton CSS for styling
 
 // Utility function to limit the number of words in a string
 const truncateText = (text, wordLimit) => {
@@ -38,7 +40,25 @@ const BinodonNews = () => {
   const featured2 = data.filter((item) => item.is_featured === 2).slice(0, 6);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="container">
+        <SectionHeader title="বিনোদন" />
+        <div className="row">
+          <div className="col-xl-5">
+            <Skeleton height={500} />
+          </div>
+          <div className="col-xl-7">
+            <div className="row">
+              {Array.from({ length: 6 }).map((_, index) => (
+                <div className="col-md-4 mb-4" key={index}>
+                  <Skeleton height={300} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
