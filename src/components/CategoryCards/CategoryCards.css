@@ -1,0 +1,29 @@
+.feature-info {
+  background-image: linear-gradient(
+    45deg,
+    rgb(22, 85, 136) 0%,
+    rgb(237, 30, 43) 51%,
+    rgb(22, 85, 136) 100%
+  );
+  color: white;
+}
+
+.single-category {
+  height: 200px;
+}
+.single-category-feature img{
+    width: 100%;
+    height: 310px !important;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid #cdcdcd !important;
+    opacity: .25;
+}
+.single-category-non img{
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover;
+}

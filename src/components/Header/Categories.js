@@ -1,5 +1,5 @@
 "use client";
-import   { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 import MenuDropdown from "./MenuDropdown";
@@ -43,20 +43,18 @@ const Categories = () => {
       <div className="container">
         <div className="d-flex justify-content-center">
           <ul className="navbar-nav mx-auto d-flex">
-            {/* Render dynamic navigation links */}
             {navLinks.map((link) => {
               // const parentCategory = "news"; // You can dynamically set this based on the category if needed
               // const url = link.name.toLowerCase();
               return (
                 <li key={link.id} className="nav-item menu-border menu-specing">
                   <Link href={`/${link.name}/${link.id}`} passHref>
+                    {/* <p>{`/${link.name}/${link.id}`}</p> */}
                     <div className="nav-link navlinks">{link.name_bangla}</div>
                   </Link>
                 </li>
               );
             })}
-
-            {/* Optionally render extra navigation items if needed */}
             <MenuDropdown extraNav={extraNav} />
           </ul>
         </div>

@@ -1,0 +1,87 @@
+.info-cards{
+    background-color: var(--main);
+    color: var(--white);
+    border-radius: 8px;
+}
+.info-cards h4{
+    color: white;
+}
+.icon-container{
+    background-color: var(--secondary);
+    border-radius: 5px;
+}
+.icon-container-amount {
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    width: 50px;
+    font-size: 28px;
+    border-radius: 50px;
+  }
+  .user-dash-icons {
+    background-color: var(--main);
+    padding: 1px;
+    font-size: 18px;
+    border-radius: 16px;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+  .user-dash-icons:hover {
+    background-color: var(--secondary);
+    padding: 1px;
+    font-size: 18px;
+    border-radius: 16px;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+  .user-th th{
+    background-color: var(--main) !important;
+    color: white !important;
+  }.info-cards{
+    background-color: var(--main);
+    color: var(--white);
+    border-radius: 8px;
+}
+.info-cards h4{
+    color: white;
+}
+.icon-container{
+    background-color: var(--secondary);
+    border-radius: 5px;
+}
+.icon-container-amount {
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    width: 50px;
+    font-size: 28px;
+    border-radius: 50px;
+  }
+  .user-dash-icons {
+    background-color: var(--main);
+    padding: 1px;
+    font-size: 18px;
+    border-radius: 16px;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+  .user-dash-icons:hover {
+    background-color: var(--secondary);
+    padding: 1px;
+    font-size: 18px;
+    border-radius: 16px;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+  .user-th th{
+    background-color: var(--main) !important;
+    color: white !important;
+  }

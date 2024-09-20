@@ -7,7 +7,7 @@ const Sidebar = () => {
     <div>
       <SectionHeader title="বিজ্ঞাপন কর্নার।" />
       <div className="row justify-content-center mx-auto">
-        <div className="col-xl-12">
+        <div className="col-xl-12 px-0">
           <iframe
             width="100%"
             height="300"
@@ -18,7 +18,7 @@ const Sidebar = () => {
             allowFullScreen
           ></iframe>
         </div>
-        <div className="col-xl-12">
+        <div className="col-xl-12 px-0">
           <Image
             src="https://tpc.googlesyndication.com/simgad/17948013078181412381"
             alt="Add One"
