@@ -28,7 +28,7 @@ export default async function Layout ({ children }) {
             <div className="user-accounts-sidebar">
               <ul className="user-nav navbar-nav flex-column pt-3 ps-4">
                 <li className="nav-item">
-                  <Link href={"/user/"} className="user-dashboard-nav nav-link">
+                  <Link href={"/dashboard/"} className="user-dashboard-nav nav-link">
                     <div className="d-flex align-items-center ">
                       <span style={{ color: "var(--main)" }}>
                         <AiFillDashboard className="pe-2 fs-2" />
@@ -39,7 +39,7 @@ export default async function Layout ({ children }) {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href={"/user/profile"}
+                    href={"/dashboard/profile"}
                     activeclassname="active"
                     className="user-dashboard-nav nav-link"
                   >
@@ -53,7 +53,7 @@ export default async function Layout ({ children }) {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href={"/user/news-post"}
+                    href={"/dashboard/news-post"}
                     activeclassname="active"
                     className="user-dashboard-nav nav-link"
                   >
@@ -67,7 +67,7 @@ export default async function Layout ({ children }) {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href={"/user/advertisement"}
+                    href={"/dashboard/advertisement"}
                     activeclassname="active"
                     className="user-dashboard-nav nav-link"
                   >

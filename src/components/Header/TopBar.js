@@ -16,7 +16,7 @@ const TopBar = () => {
             <div className="top-bar d-flex justify-content-center">
               <ul className="mb-0">
                 <li>
-                  <Link href="/user/advertisement">
+                  <Link href="/dashboard/advertisement">
                     <span className="navlinks-top">বিজ্ঞাপন</span>
                   </Link>
                 </li>
