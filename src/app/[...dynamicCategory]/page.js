@@ -48,7 +48,7 @@ export default async function Page({ params }) {
 //   const route = `https://backoffice.ajkal.us/category-news/${combinedPathMore}`;
 //   let data = await fetch(route);
 //   let categoryData = await data.json();
-//   // console.log(categoryData.data);
+//   // //(categoryData.data);
 //   let CategoryList = [...categoryData?.data] || [];
 //   return (
 //     <div className="container my-4">

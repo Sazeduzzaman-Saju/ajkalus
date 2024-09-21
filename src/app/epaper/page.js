@@ -23,7 +23,7 @@ export default async function page() {
     console.error("Error fetching epaper data:", error);
   }
 
-  console.log(epaperList.length);
+  //(epaperList.length);
 
   return (
     <div className="container">

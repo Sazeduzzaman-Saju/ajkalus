@@ -9,12 +9,12 @@ export default async function page({params}) {
 
     // const combinedPathMore = await dynamicCategory.slice(1).join("/");
     // const route = `https://backoffice.ajkal.us/category-news/${combinedPathMore}`;
-    // console.log(route);
+    // //(route);
     // let data = await fetch(route);
     // let categoryData = await data.json();
-    // // console.log(categoryData.data);
+    // // //(categoryData.data);
     // let CategoryList = [...categoryData?.data] || [];
-    console.log(params);
+    //(params);
   return (
     <div className="container">
       <div className="row mx-auto">

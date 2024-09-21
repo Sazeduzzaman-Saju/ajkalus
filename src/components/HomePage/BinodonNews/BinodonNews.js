@@ -25,7 +25,7 @@ export default async function BinodonNews() {
   const featured2 = binodonList
     .filter((item) => item.is_featured === 2)
     .slice(0, 6);
-  console.log(featured1, featured2);
+  //(featured1, featured2);
   return (
     <>
       <div className="container">
