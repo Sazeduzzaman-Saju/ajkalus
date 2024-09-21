@@ -9,10 +9,8 @@ export function middleware(req) {
   const token = false
 
   const url = req.nextUrl.clone();
-
   const protectedRoutes = ['/dashboard']; 
-
-  if (protectedRoutes.includes(url.pathname) && !token) {
+  if (protectedRoutes.some((route) => url.pathname.startsWith(route)) && !token) {
     url.pathname = 'login'; // Redirect to login page
     return NextResponse.redirect(url); 
   }
@@ -23,5 +21,5 @@ export function middleware(req) {
 
 // Protect these routes path
 export const config = {
-  matcher: ['/dashboard/:path*', '/profile/:path*'], 
+  matcher: ['/dashboard/:path*'], 
 };
