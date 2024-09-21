@@ -9,24 +9,10 @@ export function middleware(req) {
   const token = false;
 
   const url = req.nextUrl.clone();
-  console.log(url.pathname);
-
-  // const protectedRoutes = ['/dashboard'];
-
-  // if (protectedRoutes.includes(url.pathname) && !token) {
-  //   url.pathname = 'login'; // Redirect to login page
-  //   return NextResponse.redirect(url);
-  // }
-  // Define protected routes
-  const protectedRoutes = ["/dashboard"];
-
-  
-  if (
-    protectedRoutes.some((route) => url.pathname.startsWith(route)) &&
-    !token
-  ) {
-    url.pathname = "/login"; // Redirect to login page
-    return NextResponse.redirect(url);
+  const protectedRoutes = ['/dashboard']; 
+  if (protectedRoutes.some((route) => url.pathname.startsWith(route)) && !token) {
+    url.pathname = 'login'; // Redirect to login page
+    return NextResponse.redirect(url); 
   }
 
   return NextResponse.next();
@@ -34,5 +20,5 @@ export function middleware(req) {
 
 // Protect these routes path
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: ['/dashboard/:path*'], 
 };
