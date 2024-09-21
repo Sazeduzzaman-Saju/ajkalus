@@ -23,11 +23,11 @@ const NewsDetails = ({ singleNewsDetails }) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xl-9 px-0">
+      <div className="row">
+        <div className="col-xl-9 px-0">
           <NewsDetailsContent singleNewsDetails={singleNewsDetails} />
         </div>
-        <div class="col-xl-3">
+        <div className="col-xl-3">
           <Sidebar />
         </div>
       </div>

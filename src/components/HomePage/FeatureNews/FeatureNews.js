@@ -19,9 +19,9 @@ export default async function FeatureNewsComponent() {
   }
   return (
     <div className="feature-top-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
             <FeatureSlide featureList={featureList} />
           </div>
         </div>
