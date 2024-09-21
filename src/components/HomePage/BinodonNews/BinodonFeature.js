@@ -1,24 +1,25 @@
 // src/components/BinodonFeature.js
+"use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-const BinodonFeature = ({ title, data, imageDimensions }) => {
+const BinodonFeature = ({ featured1 }) => {
   return (
-    <div className="col-xl-4">
-      <h2 className="section-title">{title}</h2>
-      {data.length > 0 ? (
-        data.map((item) => (
+    <div>
+      {featured1.length > 0 ? (
+        featured1.map((item) => (
           <div
             key={item.id}
             className="card rounded-1 border-0 shadow-sm feature-cards mb-4"
           >
-            {" "}
             <Link href={`/news-detail/${item?.id}`}>
               <Image
                 src={`https://ajkal.us/img/news/${item.title_img}`}
                 alt={item.news_title}
-                width={imageDimensions.width}
-                height={imageDimensions.height}
+                className="img-fluid"
+                width={300}
+                height={300}
                 style={{ objectFit: "cover" }}
                 onError={(e) => {
                   e.currentTarget.src =

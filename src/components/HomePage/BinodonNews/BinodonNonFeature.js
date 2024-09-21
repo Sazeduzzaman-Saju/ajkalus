@@ -1,40 +1,41 @@
 // src/components/BinodonNonFeature.js
+"use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-const BinodonNonFeature = ({ title, data, imageDimensions }) => {
+const BinodonNonFeature = ({ featured2 }) => {
   return (
-    <div className="col-xl-8">
-      <h2 className="section-title">{title}</h2>
-      {data.length > 0 ? (
-        data.map((item) => (
-          <div
-            key={item.id}
-            className="card rounded-1 border-0 shadow-sm feature-cards mb-4"
-          >
+    <>
+      {featured2.length > 0 ? (
+        featured2.map((item) => (
+          <div className="col-md-4 mb-4" key={item.id}>
             <Link href={`/news-detail/${item?.id}`}>
-              <Image
-                src={`https://ajkal.us/img/news/${item.title_img}`}
-                alt={item.news_title}
-                width={imageDimensions.width}
-                height={imageDimensions.height}
-                style={{ objectFit: "cover" }}
-                onError={(e) => {
-                  e.currentTarget.src =
-                    "https://ajkal.us/img/settings/placeholder.jpg";
-                }}
-              />
-              <div className="card-body">
-                <h5>{item.news_title}</h5>
-                <p>{item.news_short_brief}</p>
+              <div className="card border-0 shadow-sm">
+                <div className="card-body p-0">
+                  <Image
+                    className="img-fluid"
+                    src={`https://ajkal.us/img/news/${item.title_img}`}
+                    alt={item.news_title}
+                    layout="responsive"
+                    width={600}
+                    height={400}
+                    placeholder="blur"
+                    blurDataURL="https://ajkal.us/img/settings/placeholder.jpg"
+                  />
+                  <div className="p-3">
+                    <h5>{item.news_title}</h5>
+                    <p>{item.news_short_brief}</p>
+                  </div>
+                </div>
               </div>
             </Link>
           </div>
         ))
       ) : (
-        <p>No non-featured news available.</p>
+        <p>No featured items for this category.</p>
       )}
-    </div>
+    </>
   );
 };
 
