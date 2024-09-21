@@ -5,7 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import NewsDetailsContent from "./NewsDetailsContent";
 
 const NewsDetails = ({ singleNewsDetails }) => {
-  console.log(singleNewsDetails);
+  //(singleNewsDetails);
   return (
     <div className="container">
       <div className="row">

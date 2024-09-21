@@ -9,7 +9,7 @@ const KhelarSingleNews = ({ featuredOne, featuredTwo, error }) => {
   const loading = !featuredOne && featuredTwo.length === 0; // Determine loading state based on data
 
   if (error) return <p>{error}</p>; // Show error if fetching fails
-console.log(featuredOne,featuredTwo)
+//(featuredOne,featuredTwo)
   return (
     <div>
       <div className="row mb-4">

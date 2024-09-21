@@ -16,7 +16,7 @@ export async function NewsSectionFive() {
   } catch (err) {
     error = "Failed to fetch data";
   }
-console.log(NewWorkNewsData)
+//(NewWorkNewsData)
   return (
     <div className="container">
       <SectionHeader title="নিউইয়র্ক" />

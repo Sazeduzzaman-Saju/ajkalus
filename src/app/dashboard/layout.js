@@ -5,7 +5,12 @@ import { BiLogOut, BiUpload } from "react-icons/bi";
 import { FaLine, FaRegUser } from "react-icons/fa";
 import "./layout.css";
 
-const Layout = ({ children }) => {
+
+
+
+
+export default async function Layout ({ children }) {
+
   return (
     <div>
       <div className="container">
@@ -92,4 +97,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+// export default Layout;
