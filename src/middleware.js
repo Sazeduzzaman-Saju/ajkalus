@@ -5,9 +5,7 @@ import { NextResponse } from 'next/server';
 export function middleware(req) {
   // TODO : check the login info or jwt and another checking info 
   // then opne the private route security
-
   // const token = req.cookies.get('authToken');
-
   const token = false
 
   const url = req.nextUrl.clone();
