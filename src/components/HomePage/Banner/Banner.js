@@ -7,7 +7,7 @@ export default async function page() {
   // Add error handling for fetch
   let bannerList = [];
   try {
-    let data = await fetch(route);
+    let data = await fetch(route, { cache: 'no-store' });
 
     // Check if the fetch was successful (HTTP status code 200)
     if (!data.ok) {

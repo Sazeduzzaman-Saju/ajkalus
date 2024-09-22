@@ -45,7 +45,7 @@ const page = () => {
               <p className="text-muted">
                 Account means a unique account created for You to access our
                 Service or parts of our Service. Company (referred to as either
-                "the Company", "We", "Us" or "Our" in this Agreement) refers to
+                the Company , {"We"}, {"Us"} or {"Our"} in this Agreement) refers to
                 Daily Weekly Ajkal, 71-16 35th Ave, Jackson Heights,NY 11372,
                 USA. Cookies are small files that are placed on Your computer,
                 mobile device or any other device by a website, containing the
@@ -95,7 +95,7 @@ const page = () => {
                 Usage Data is collected automatically when using the Service.
               </strong>
               <p className="text-muted">
-                Usage Data may include information such as Your Device's
+                Usage Data may include information such as Your {"Device's"}
                 Internet Protocol address (e.g. IP address), browser type,
                 browser version, the pages of our Service that You visit, the
                 time and date of Your visit, the time spent on those pages,
@@ -131,13 +131,13 @@ const page = () => {
                 If You decide to register through or otherwise grant us access
                 to a Third-Party Social Media Service, We may collect Personal
                 data that is already associated with Your Third-Party Social
-                Media Service's account, such as Your name, Your email address,
+                Media {"Service's"} account, such as Your name, Your email address,
                 Your activities or Your contact list associated with that
                 account.
               </p>
               <p className="text-muted">
                 You may also have the option of sharing additional information
-                with the Company through Your Third-Party Social Media Service's
+                with the Company through Your Third-Party Social Media {"Service's"}
                 account. If You choose to provide such information and Personal
                 Data, during registration or otherwise, You are giving the
                 Company permission to use, share, and store it in a manner
@@ -167,14 +167,14 @@ const page = () => {
                 about Your preferences or Your activity on our Service. Flash
                 Cookies are not managed by the same browser settings as those
                 used for Browser Cookies. For more information on how You can
-                delete Flash Cookies, please read "Where can I change the
-                settings for disabling, or deleting local shared objects?"
+                delete Flash Cookies, please read Where can I change the
+                settings for disabling, or deleting local shared objects?
                 available at Web Beacons.as clear gifs, pixel tags, and
                 single-pixel gifs) that permit the Company, for example, to
                 count users who have visited those pages or opened an email and
                 for other related website statistics (for example, recording the
                 popularity of a certain section and verifying system and server
-                integrity). Cookies can be "Persistent" or "Session" Cookies.
+                integrity). Cookies can be {"Persistent"} or {"Session"} Cookies.
                 Persistent Cookies remain on Your personal computer or mobile
                 device when You go offline, while Session Cookies are deleted as
                 soon as You close Your web browser. Learn more about cookies:
@@ -243,7 +243,7 @@ const page = () => {
                 services You have purchased or of any other contract with Us
                 through the Service. To contact You: To contact You by email,
                 telephone calls, SMS, or other equivalent forms of electronic
-                communication, such as a mobile application's push notifications
+                communication, such as a mobile {"application's"} push notifications
                 regarding updates or informative communications related to the
                 functionalities, products or contracted services, including the
                 security updates, when necessary or reasonable for their
@@ -324,7 +324,7 @@ const page = () => {
               </h4>
               <p className="text-muted">
                 Your information, including Personal Data, is processed at the
-                Company's operating offices and in any other places where the
+                {"Company's"} operating offices and in any other places where the
                 parties involved in the processing are located. It means that
                 this information may be transferred to — and maintained on —
                 computers located outside of Your state, province, country or
@@ -376,7 +376,7 @@ const page = () => {
                 </li>
                 <li>Protect against legal liability</li>
               </ul>
-              <h4 className="main_color policy-text">Children's Privacy</h4>
+              <h4 className="main_color policy-text"> {"Children's"}Privacy</h4>
               <p className="text-muted">
                 Our Service does not address anyone under the age of 13. We do
                 not knowingly collect personally identifiable information from
@@ -390,7 +390,7 @@ const page = () => {
               <p className="text-muted">
                 If We need to rely on consent as a legal basis for processing
                 Your information and Your country requires consent from a
-                parent, We may require Your parent's consent before We collect
+                parent, We may require Your {"parent's"} consent before We collect
                 and use that information.
               </p>
               <h4 className="main_color policy-text">
@@ -399,7 +399,7 @@ const page = () => {
               <p className="text-muted">
                 Our Service may contain links to other websites that are not
                 operated by Us. If You click on a third party link, You will be
-                directed to that third party's site. We strongly advise You to
+                directed to that third {"party's"} site. We strongly advise You to
                 review the Privacy Policy of every site You visit. We have no
                 control over and assume no responsibility for the content,
                 privacy policies or practices of any third party sites or
@@ -413,7 +413,7 @@ const page = () => {
                 notify You of any changes by posting the new Privacy Policy on
                 this page. We will let You know via email and/or a prominent
                 notice on Our Service, prior to the change becoming effective
-                and update the "Last updated" date at the top of this Privacy
+                and update the {"Last updated"} date at the top of this Privacy
                 Policy. You are advised to review this Privacy Policy
                 periodically for any changes. Changes to this Privacy Policy are
                 effective when they are posted on this page.

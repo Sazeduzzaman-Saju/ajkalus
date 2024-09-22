@@ -16,7 +16,7 @@ const page = () => {
                 and captivating stories. Established with a vision to provide a
                 comprehensive perspective on the events shaping our world,
                 Weekly Ajkal stands as a beacon of journalistic integrity and
-                excellence in today's media landscape.
+                excellence in {"today's"} media landscape.
               </p>
               <p className="english-text pb-4">
                 At Weekly Ajkal, we believe in the transformative power of
@@ -30,7 +30,7 @@ const page = () => {
               <p className="english-text pb-4">
                 Our coverage spans a wide spectrum of topics, ranging from
                 breaking news and current affairs to in-depth features and
-                cultural highlights. Whether you're interested in politics,
+                cultural highlights. Whether {"you're"} interested in politics,
                 business, technology, arts, or sports, Weekly Ajkal has
                 something for everyone. We strive to capture the pulse of
                 society, amplifying diverse voices and perspectives to foster
@@ -44,7 +44,7 @@ const page = () => {
                 an era of misinformation and fake news.
               </p>
               <p className="english-text pb-4">
-                Weekly Ajkal is more than just a news outlet; it's a community
+                Weekly Ajkal is more than just a news outlet; {"it's"} a community
                 of engaged and informed individuals who share a passion for
                 knowledge and insight. We invite you to join us on this journey
                 as we explore the complexities of our world, celebrate the
@@ -53,7 +53,7 @@ const page = () => {
               </p>
               <p className="english-text pb-4">
                 Thank you for choosing Weekly Ajkal as your weekly window to the
-                world. Together, let's embark on a journey of discovery,
+                world. Together, {"let's"} embark on a journey of discovery,
                 enlightenment, and growth with each edition.
               </p>
             </div>
