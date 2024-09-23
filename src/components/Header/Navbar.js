@@ -7,7 +7,7 @@ import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 import {
   calculateRemainingDays,
   filterValidAdvertisements,
-} from "@/utility/advertisementUtils/advertisementUtils";
+} from "@/utility/advertisementUtils/HeaderTop";
 
 export async function generateStaticParams() {
   let advertisementList = await advertisementApi();
@@ -29,7 +29,7 @@ export default async function Navbar() {
 
   return (
     <div className="container-fluid bg-light sticky-top shadow-sm">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary py-0">
         <div className="container px-0">
           <div className="d-flex justify-content-between align-items-center mobile-triger">
             <Link href="/" className="navbar-brand">
@@ -78,7 +78,7 @@ export default async function Navbar() {
               </>
             )}
             <div className="ms-1">
-              <Link href="/search-page" className="search-btn rounded-2">
+              <Link href="/search-page" className="search-btn rounded-2 mt-1">
                 <BiSearch size={20} />
               </Link>
             </div>

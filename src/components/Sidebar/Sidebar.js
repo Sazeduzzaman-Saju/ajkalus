@@ -1,31 +1,30 @@
 import React from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
-import { Image } from "react-bootstrap";
-import "./sidebar.css";
 import Link from "next/link";
 import advertisementApi from "@/utility/advertisementApi/advertisementApi";
-import {
-  calculateRemainingDays,
-  filterValidAdvertisements,
-} from "@/utility/advertisementUtils/advertisementUtils";
+import { filterSidebarAdvertisements } from "@/utility/advertisementUtils/sidebarAdvertisementUtils";
+import "./sidebar.css";
 
 export async function generateStaticParams() {
-  let advertisementList = await advertisementApi();
-  return advertisementList;
+  let sidebarAdvertisementData = await advertisementApi();
+  return sidebarAdvertisementData;
 }
 
 export default async function Sidebar() {
-  let advertisementList = await advertisementApi();
+  let sidebarAdvertisementData = await advertisementApi();
 
-  // Specify the position you want to filter for
-  const position = "HeaderTop"; // Change this for different pages or components
-  const validAdvertisements = filterValidAdvertisements(
-    advertisementList,
-    position
+  // Define sidebar positions dynamically
+  const numberOfPositions = 10; // Change this to the desired number of positions
+  const positions = Array.from(
+    { length: numberOfPositions },
+    (_, i) => `Sidebar${i + 1}`
   );
-  const advertisementData =
-    validAdvertisements.length > 0 ? validAdvertisements[0] : null;
-  const remainingDays = calculateRemainingDays(advertisementData);
+
+  const validAdvertisements = filterSidebarAdvertisements(
+    sidebarAdvertisementData,
+    positions
+  );
+
   return (
     <div>
       <SectionHeader title="বিজ্ঞাপন কর্নার।" />
@@ -117,39 +116,37 @@ export default async function Sidebar() {
           </div>
         </div>
         <div className="col-xl-12 px-0">
-          <iframe
-            width="100%"
-            height="300"
-            src={`https://www.youtube.com/embed/_U_TCak8ovo?si=5tMu37JIQeVDmfIK`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-        <div className="col-xl-12 px-0">
           {/* Sidebar advertisement start */}
-          <Image
-            src="https://tpc.googlesyndication.com/simgad/17948013078181412381"
-            alt="Add One"
-            className="img-fluid mt-2 pt-1"
-          ></Image>
-          <Image
-            src="https://tpc.googlesyndication.com/simgad/10140310770584896494"
-            alt="Add Two"
-            className="img-fluid mt-2 pt-1"
-          ></Image>
-          <Image
-            src="https://tpc.googlesyndication.com/simgad/6267832297710722939"
-            alt="Add Three"
-            className="img-fluid mt-2 pt-1"
-          ></Image>
-          {/* <Image
-            src="https://tpc.googlesyndication.com/simgad/12053529903251625672"
-            alt="Add Three"
-            className="img-fluid mt-2 pt-1"
-            
-          ></Image> */}
+          {validAdvertisements.map((ad, index) => {
+            const expirationDate = new Date(ad.start_date);
+            expirationDate.setDate(
+              expirationDate.getDate() + (ad.duration === "week" ? 7 : 30)
+            ); // Adjust based on duration
+            const isExpired = new Date() > expirationDate;
+
+            return (
+              <div key={ad.id} className="advertisement-container">
+                {isExpired ? (
+                  <img
+                    src={`https://ajkal.us/img/ad/${ad.ad_banner}`} // Fallback image for expired ads
+                    alt="Fallback Advertisement"
+                    className="img-fluid w-100 mx-auto"
+                    style={{ height: "80px" }} // Ensure height is appropriate
+                    title="Advertisement expired"
+                  />
+                ) : (
+                  <img
+                    src={"https://i.ibb.co.com/qFSNHWt/ad-placeholder-2.jpg"}
+                    alt={"Advertisement asdasdasd"}
+                    className="img-fluid mt-2 pt-1"
+                  />
+                )}
+                <p className="advertisement-text">
+                  {ad.ad_position} {isExpired && <span>(Expired)</span>}
+                </p>
+              </div>
+            );
+          })}
           {/* Sidebar advertisement end */}
         </div>
       </div>

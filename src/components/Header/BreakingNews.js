@@ -32,7 +32,7 @@ const BreakingNews = () => {
 
   return (
     <div className="container-fluid bg-light">
-      <div className="container main-menu-2">
+      <div className="container main-menu-2 rounded-2 mt-1 mb-0">
         <div className="top-bar-area align-items-center">
           <div className="row p-2 px-0">
             <div className="col-lg-12">
