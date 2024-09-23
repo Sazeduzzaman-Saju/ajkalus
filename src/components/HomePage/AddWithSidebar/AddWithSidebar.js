@@ -4,8 +4,8 @@ import NewsSidebarOne from "./NewsSidebarOne/NewsSidebarOne";
 import NewsSidebarTwo from "./NewsSidebarOne/NewsSidebarTwo";
 import { Image } from "react-bootstrap";
 import NewsSidebarThree from "./NewsSidebarOne/NewsSidebarThree";
-import NewsSidebarFour from "./NewsSidebarOne/NewsSidebarFour";
-import NewsSectionFive from "./NewsSidebarOne/NewsSectionFive";
+import NewsSidebarFour from "./NewsSidebarOne/SakkhatkarNews";
+import NewsSectionFive from "./NewsSidebarOne/NewYorkSection";
 
 const AddWithSidebar = () => {
   return (
@@ -28,14 +28,9 @@ const AddWithSidebar = () => {
               <Image
                 src="https://tpc.googlesyndication.com/simgad/18173373242370806951"
                 alt="Add One"
-                className="img-fluid mt-3"
+                className="img-fluid"
               ></Image>
             </div>
-          </div>
-          <div className="col-xl-12">
-            <NewsSidebarThree />
-            <NewsSidebarFour />
-            <NewsSectionFive/>
           </div>
         </div>
       </div>

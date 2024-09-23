@@ -29,9 +29,9 @@ const page = () => {
                       //   aria-invalid={errors.news_title ? "true" : "false"}
                     />
                     {/* {errors.news_title && (
-                      <p role="alert" className="text-danger">
+                      <div role="alert" className="text-danger">
                         {errors.news_title.message}
-                      </p>
+                      </div>
                     )} */}
                   </div>
 
@@ -46,9 +46,9 @@ const page = () => {
                       //   aria-invalid={errors.short_brief ? "true" : "false"}
                     />
                     {/* {errors.short_brief && (
-                      <p role="alert" className="text-danger">
+                      <div role="alert" className="text-danger">
                         {errors.short_brief.message}
-                      </p>
+                      </div>
                     )} */}
                   </div>
 
@@ -71,9 +71,9 @@ const page = () => {
                       ))} */}
                     </select>
                     {/* {errors.category_id && (
-                      <p role="alert" className="text-danger">
+                      <div role="alert" className="text-danger">
                         {errors.category_id.message}
-                      </p>
+                      </div>
                     )} */}
                   </div>
 
@@ -88,9 +88,9 @@ const page = () => {
                       //   aria-invalid={errors.video_url ? "true" : "false"}
                     />
                     {/* {errors.video_url && (
-                      <p role="alert" className="text-danger">
+                      <div role="alert" className="text-danger">
                         {errors.video_url.message}
-                      </p>
+                      </div>
                     )} */}
                   </div>
 
@@ -116,9 +116,9 @@ const page = () => {
                       //   aria-invalid={errors.news_image ? "true" : "false"}
                     />
                     {/* {errors.news_image && (
-                      <p role="alert" className="text-danger">
+                      <div role="alert" className="text-danger">
                         {errors.news_image.message}
-                      </p>
+                      </div>
                     )} */}
                   </div>
 
@@ -132,9 +132,9 @@ const page = () => {
                       //   aria-invalid={errors.thumbnail_image ? "true" : "false"}
                     />
                     {/* {errors.thumbnail_image && (
-                      <p role="alert" className="text-danger">
+                      <div role="alert" className="text-danger">
                         {errors.thumbnail_image.message}
-                      </p>
+                      </div>
                     )} */}
                   </div>
 
@@ -147,9 +147,9 @@ const page = () => {
                       rows="3"
                     ></textarea>
                     {/* {errors.news_detail && (
-                      <p role="alert" className="text-danger">
+                      <div role="alert" className="text-danger">
                         {errors.news_detail.message}
-                      </p>
+                      </div>
                     )} */}
                   </div>
                 </div>

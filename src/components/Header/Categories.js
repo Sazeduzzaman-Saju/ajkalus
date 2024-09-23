@@ -49,7 +49,7 @@ const Categories = () => {
               return (
                 <li key={link.id} className="nav-item menu-border menu-specing">
                   <Link href={`/${link.name}/${link.id}`} passHref>
-                    {/* <p>{`/${link.name}/${link.id}`}</p> */}
+                    {/* <div>{`/${link.name}/${link.id}`}</div> */}
                     <div className="nav-link navlinks">{link.name_bangla}</div>
                   </Link>
                 </li>

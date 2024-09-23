@@ -69,10 +69,10 @@ const LoginForm = () => {
           />
         </div>
         <div className="col-lg-12">
-          <p className="text-muted text-center pt-5">
+          <div className="text-muted text-center pt-5">
             আপনি কী নতুন, আপনার একাউন্ট নেই <br />
             তাহলে--<Link href="/register"> রেজিস্টার করুন !</Link>
-          </p>
+          </div>
         </div>
       </div>
       <input

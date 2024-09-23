@@ -8,9 +8,9 @@ const TopBar = () => {
       <div className="container">
         <div className="row top-bar-area align-items-center">
           <div className="col-lg-4">
-            <p className="mb-0">
+            <div className="mb-0">
               সেপ্টেম্বর ১৭, ২০২৪, মঙ্গলবার, ২ আশ্বিন, ১৪৩১ বঙ্গাব্দ
-            </p>
+            </div>
           </div>
           <div className="col-lg-4">
             <div className="top-bar d-flex justify-content-center">

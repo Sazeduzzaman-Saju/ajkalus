@@ -23,21 +23,25 @@ const DetailsSidebar = () => {
             src="https://tpc.googlesyndication.com/simgad/17948013078181412381"
             alt="Add One"
             className="img-fluid mt-2 pt-1"
+            
           ></Image>
           <Image
             src="https://tpc.googlesyndication.com/simgad/10140310770584896494"
             alt="Add Two"
             className="img-fluid mt-2 pt-1"
+            
           ></Image>
           <Image
             src="https://tpc.googlesyndication.com/simgad/6267832297710722939"
             alt="Add Three"
             className="img-fluid mt-2 pt-1"
+            
           ></Image>
           <Image
             src="https://tpc.googlesyndication.com/simgad/12053529903251625672"
             alt="Add Three"
             className="img-fluid mt-2 pt-1"
+            
           ></Image>
         </div>
       </div>

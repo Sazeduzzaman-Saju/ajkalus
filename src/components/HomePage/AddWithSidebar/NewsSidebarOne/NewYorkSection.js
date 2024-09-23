@@ -4,7 +4,7 @@ import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import NewWorkNews from "./NewWorkNews";
 import "react-loading-skeleton/dist/skeleton.css";
 
-export async function NewsSectionFive() {
+export async function NewWorkSection() {
   let NewWorkNewsData = [];
   let error = null;
 
@@ -12,17 +12,17 @@ export async function NewsSectionFive() {
     const response = await axios.get(
       "https://backoffice.ajkal.us/category-news/3"
     );
-    NewWorkNewsData = response.data.data || []; // Default to empty array if no data
+    NewWorkNewsData = response.data.data.slice(0, 8) || []; // Limit to 8 items
   } catch (err) {
     error = "Failed to fetch data";
   }
-//(NewWorkNewsData)
+
   return (
     <div className="container">
-      <SectionHeader title="নিউইয়র্ক" />
+      <SectionHeader title="নিউইয়র্ক || New York" />
       <NewWorkNews NewWorkNewsData={NewWorkNewsData} />
     </div>
   );
 }
 
-export default NewsSectionFive;
+export default NewWorkSection;

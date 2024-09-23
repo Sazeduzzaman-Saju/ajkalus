@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import MobileMenu from "./MobileMenu";
 import { BiSearch } from "react-icons/bi";
 

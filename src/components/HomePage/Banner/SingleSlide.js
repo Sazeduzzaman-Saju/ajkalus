@@ -17,14 +17,14 @@ const SingleSlide = ({ bannerList }) => {
                     src={`https://ajkal.us/img/news/${item.title_img}`}
                     alt={item.news_title}
                     title={item.news_title}
-                    className="rounded-0"
+                    className="rounded-3"
                     width={1920}
                     height={600}
                   />
                   <div className="banner-content-container">
                     <div className="banner-content">
                       <h1 className="mb-4">{item.news_title}</h1>
-                      <p>{item.news_short_brief}</p>
+                      <div>{item.news_short_brief}</div>
                     </div>
                   </div>
                 </div>
@@ -33,7 +33,7 @@ const SingleSlide = ({ bannerList }) => {
           </SwiperSlide>
         ))
       ) : (
-        <p>No epapers available</p>
+        <div>No epapers available</div>
       )}
     </>
   );

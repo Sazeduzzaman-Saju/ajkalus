@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 import "./profile.css";
 
 const page = () => {
-    return (
-        <div className="container">
+  return (
+    <div className="container">
       <div className="row">
         <div className="col-lg-12">
           <h3 className="text-center pt-5 main-color">আমার প্রফাইল।</h3>
@@ -33,6 +33,7 @@ const page = () => {
                         src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
                         alt="Profile"
                         title="profile"
+                         
                       />
                       {/* {fullName && (
                         <span className="font-weight-bold">{fullName}</span>
@@ -123,7 +124,7 @@ const page = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default page;

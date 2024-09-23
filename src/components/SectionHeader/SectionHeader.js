@@ -2,7 +2,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
-import './SectionHeader.css';
+import "./SectionHeader.css";
 
 const SectionHeader = ({ title = "Default Title" }) => {
   const [imgSrc, setImgSrc] = useState(
@@ -27,11 +27,9 @@ const SectionHeader = ({ title = "Default Title" }) => {
             title={title}
             width={50}
             height={40}
-            onLoadingComplete={() => {}}
-            onError={handleImageError}
           />
         </div>
-        <h4 className="mb-0">{title}</h4>
+        <h4 className="mb-0 section-header">{title}</h4>
       </div>
     </div>
   );

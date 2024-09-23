@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import "./NesSideBarOne.css";
+import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 
 const RajnitiNews = ({ data12 }) => {
   const getFeaturedItems = (data, isFeatured, limit = null) => {
@@ -31,56 +32,72 @@ const RajnitiNews = ({ data12 }) => {
 
   return (
     <>
-      <div>
+      <div className="card mb-4 shadow-sm border-0">
         {getFeaturedItems(data12, 1).map((item) => (
-          <div key={item.id} className="card mb-4 shadow-sm border-0 side-bar-cards">
-            <div className="card-body p-0">
-              <Image
-                className="img-fluid w-100"
-                src={`https://ajkal.us/img/news/${item.title_img}`}
-                alt={item.news_title}
-                layout="responsive"
-                width={700}
-                height={600}
-                placeholder="blur"
-                blurDataURL="https://ajkal.us/img/settings/placeholder.jpg"
-              />
-              <div className="content p-3">
-                <h5>{truncateText(item.news_title, 10)}</h5>
-                <div className="d-flex justify-content-between align-items-center pt-3">
-                  <p className="text-gray fw-bold" style={{ fontSize: "12px" }}>
-                    {item.category_name}
-                  </p>
-                  <p className="text-gray fw-bold" style={{ fontSize: "12px" }}>
-                    {formatDate(item.news_time)}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div>
-        {getFeaturedItems(data12, 2, 6).map((item) => (
-          <div key={item.id} className="card p-3 mb-2 title-cards">
-            <Link href={`/news-detail/${item?.id}`}>
-              <p className="pb-0">
-                <FaLongArrowAltRight className="pe-1" />
-                <span className="ps-1 text-site">{truncateText(item.news_title, 7)}</span>
-              </p>
-              <div className="hover-image-container" style={{ display: 'none' }}>
-                <Image
-                  className="hover-image"
+          <div key={item.id} className="side-bar-cards title-cards">
+            <Link
+              href={`/news-detail/${item?.id}`}
+              className="d-block position-relative"
+            >
+              <div className="card-body p-0">
+                <FallbackImages
                   src={`https://ajkal.us/img/news/${item.title_img}`}
                   alt={item.news_title}
-                  width={200}
-                  height={150}
-                  layout="responsive"
+                  title={item.news_title}
+                  className="rounded-3 img-fluid"
+                  width={700}
+                  height={700}
                 />
+                <div className="content p-3">
+                  <h5>{truncateText(item.news_title, 10)}</h5>
+                  <div className="d-flex justify-content-between align-items-center pt-3">
+                    <div
+                      className="text-gray fw-bold"
+                      style={{ fontSize: "12px" }}
+                    >
+                      {item.category_name_bangla}
+                    </div>
+                    <div
+                      className="text-gray fw-bold"
+                      style={{ fontSize: "12px" }}
+                    >
+                      {formatDate(item.news_time)}
+                    </div>
+                  </div>
+                </div>
               </div>
             </Link>
           </div>
         ))}
+        <div>
+          {getFeaturedItems(data12, 2, 6).map((item) => (
+            <div key={item.id} className="title-card-hover p-3 py-2">
+              <ul>
+                <li className="card-list-items">
+                  <Link
+                    href={`/news-detail/${item?.id}`}
+                    className="d-block position-relative"
+                  >
+                    <div className="pb-0">
+                      {/* <FaLongArrowAltRight className="pe-1" /> */}
+                      <span className="ps-1 text-site">
+                        {truncateText(item.news_title, 7)}
+                      </span>
+                    </div>
+                    <FallbackImages
+                      src={`https://ajkal.us/img/news/${item.title_img}`}
+                      alt={item.news_title}
+                      title={item.news_title}
+                      className="rounded-3 hover-image"
+                      width={900}
+                      height={700}
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
 
       <style jsx>{`

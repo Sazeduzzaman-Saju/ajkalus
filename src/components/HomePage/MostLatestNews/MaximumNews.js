@@ -1,28 +1,23 @@
 import React from "react";
 import MaximumSingleNews from "./MaximumSingleNews";
+import viewdNewsApi from "@/utility/viewdNews/viewdNewsApi";
+
+export async function generateStaticParams() {
+  let viewdNewsData = await viewdNewsApi();
+  return viewdNewsData;
+}
 
 export default async function MaximumNews() {
-  const route = `https://backoffice.ajkal.us/viewed-news`;
+  let viewdNewsData = await viewdNewsApi();
 
-  // Fetch data with error handling
-  let mostLatestList = [];
-  try {
-    const response = await fetch(route);
-    // Check if the fetch was successful (HTTP status code 200)
-    if (!response.ok) {
-      throw new Error(`Failed to fetch data: ${response.statusText}`);
-    }
-    const mostLatestData = await response.json();
-    mostLatestList = mostLatestData?.data || []; // Safely extract the data
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
+  // Slice the data to get the first 8 items
+  const slicedNewsData = viewdNewsData.slice(0, 6);
 
   return (
     <div className="container">
       <div className="row align-items-center">
-        {mostLatestList.map((item) => (
-          <div className="col-md-12 mb-3" key={item.id}>
+        {slicedNewsData.map((item) => (
+          <div className="col-md-12" key={item.id}>
             <MaximumSingleNews newsItem={item} /> {/* Pass each news item */}
           </div>
         ))}

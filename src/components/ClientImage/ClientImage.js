@@ -12,9 +12,6 @@ const ClientImage = ({ src, alt, width, height, placeholder }) => {
       width={width}
       height={height}
       style={{ objectFit: "cover" }}
-      onError={(e) => {
-        e.currentTarget.src = placeholder;
-      }}
     />
   );
 };

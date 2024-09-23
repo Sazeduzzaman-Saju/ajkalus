@@ -82,9 +82,6 @@ const Page = () => {
             width={600}
             height={600}
             title="Sign Up"
-            onError={(e) => {
-              e.target.src = "https://ajkal.us/img/settings/placeholder.jpg";
-            }}
           />
         </div>
         <div className="col-lg-6">
@@ -93,9 +90,9 @@ const Page = () => {
               <div>
                 <div className="text-center py-2">
                   <h3 className="text-muted mb-0">রেজিস্টার করুন !</h3>
-                  <p className="text-muted mb-0">
+                  <div className="text-muted mb-0">
                     সাপ্তাহিক আজকালে আপনাকে স্বাগতম।
-                  </p>
+                  </div>
                 </div>
                 <div className="row pt-4">
                   <div className="col-lg-10 offset-1 mx-auto">
@@ -115,7 +112,7 @@ const Page = () => {
                             className="form-style mb-2 form-control"
                           />
                           {errors.full_name && (
-                            <p className="text-danger">{errors.full_name}</p>
+                            <div className="text-danger">{errors.full_name}</div>
                           )}
                         </div>
                         <div className="col-lg-6">
@@ -133,7 +130,7 @@ const Page = () => {
                             className="form-style mb-2 form-control"
                           />
                           {errors.phone && (
-                            <p className="text-danger">{errors.phone}</p>
+                            <div className="text-danger">{errors.phone}</div>
                           )}
                         </div>
                         <div className="col-lg-6">
@@ -150,7 +147,7 @@ const Page = () => {
                             className="form-style mb-2 form-control"
                           />
                           {errors.email && (
-                            <p className="text-danger">{errors.email}</p>
+                            <div className="text-danger">{errors.email}</div>
                           )}
                         </div>
                         <div className="col-lg-6">
@@ -168,7 +165,7 @@ const Page = () => {
                             <option value="2">মহিলা</option>
                           </select>
                           {errors.gender && (
-                            <p className="text-danger">{errors.gender}</p>
+                            <div className="text-danger">{errors.gender}</div>
                           )}
                         </div>
                         <div className="col-lg-6">
@@ -186,7 +183,7 @@ const Page = () => {
                             className="form-style form-control"
                           />
                           {errors.password && (
-                            <p className="text-danger">{errors.password}</p>
+                            <div className="text-danger">{errors.password}</div>
                           )}
                         </div>
                         <div className="col-lg-6">
@@ -203,7 +200,7 @@ const Page = () => {
                             className="form-style mb-2 form-control"
                           />
                           {errors.username && (
-                            <p className="text-danger">{errors.username}</p>
+                            <div className="text-danger">{errors.username}</div>
                           )}
                         </div>
                         <div className="col-lg-12">
@@ -220,7 +217,7 @@ const Page = () => {
                             className="form-style form-control"
                           />
                           {errors.address && (
-                            <p className="text-danger">{errors.address}</p>
+                            <div className="text-danger">{errors.address}</div>
                           )}
                         </div>
                         <div className="col-lg-12">
@@ -242,14 +239,14 @@ const Page = () => {
                             </label>
                           </div>
                           {errors.policy && (
-                            <p className="text-danger">{errors.policy}</p>
+                            <div className="text-danger">{errors.policy}</div>
                           )}
                         </div>
                       </div>
-                      <p className="text-muted text-center pt-5">
+                      <div className="text-muted text-center pt-5">
                         আপনার অ্যাকাউন্ট আগে থেকেই করা আছে? তাহলে{" "}
                         <Link href="/login">লগিন করুন!</Link>
-                      </p>
+                      </div>
                       {/* <input
                         type="submit"
                         value="Sign Up"

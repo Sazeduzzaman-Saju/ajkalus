@@ -12,7 +12,12 @@ const CopyUrlButton = () => {
   };
 
   return (
-    <button onClick={copyUrlToClipboard} aria-label="Copy URL">
+    <button
+      className="btn btn-sm me-2 text-site border"
+      onClick={copyUrlToClipboard}
+      title="Copy News URL"
+      aria-label="Copy URL"
+    >
       <FaCopy />
     </button>
   );

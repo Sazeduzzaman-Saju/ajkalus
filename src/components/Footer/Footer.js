@@ -4,8 +4,8 @@ import "./Footer.css";
 import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import axios from "axios";
-import Image from "next/image";
 import Link from "next/link";
+import { Image } from "react-bootstrap";
 
 const Footer = () => {
   const [categoriesData, setCategoriesData] = useState([]);
@@ -49,10 +49,9 @@ const Footer = () => {
               >
                 <Link href="/">
                   <Image
+                  className="img-fluid"
                     src="https://ajkal.us/img/settings/logo_red.png"
                     alt="logored"
-                    width={200}
-                    height={50}
                     title="logored"
                   />
                 </Link>
@@ -86,7 +85,7 @@ const Footer = () => {
                       </div>
                     ))
                   ) : (
-                    <p className="text-white">No categories available</p>
+                    <div className="text-white">No categories available</div>
                   )}
                 </div>
               </ul>
@@ -169,29 +168,29 @@ const Footer = () => {
             <div className="col-lg-10 ps-0 col-12 text-lg-start text-center">
               <div>
                 <div>
-                  <p className="fs-3 text-white mb-0 sompadok">
+                  <div className="fs-3 text-white mb-0 sompadok">
                     <span>সম্পাদক ও প্রকাশক : </span>
                     <span className="pe-3">শাহ্‌ নেওয়াজ</span> <br />
                     <span>প্রধান সম্পাদক : </span>
                     <span>মনজুর আহমেদ</span>
-                  </p>
+                  </div>
                 </div>
                 <div className="text-lg-start text-center">
-                  <p className="text-white mb-0 pt-3">
+                  <div className="text-white mb-0 pt-3">
                     ফোন: <span>+1646 267-7751</span> ফ্যাক্স:{" "}
                     <span>718-865-9130</span>
                     <span>
                       <br />
                       ঠিকানাঃ 71-16 35th Ave, Jackson Heights, NY 11372, USA.
                     </span>
-                  </p>
-                  <p className="text-white mb-0">
+                  </div>
+                  <div className="text-white mb-0">
                     ইমেইল: <span>ajkalnews@gmail.com {","} </span>
                     <span>editor@ajkalusa.com</span>
-                  </p>
-                  <p className="text-white text-lg-start text-center mb-0 pt-0">
+                  </div>
+                  <div className="text-white text-lg-start text-center mb-0 pt-0">
                     কপিরাইট © ২০২৪ সাপ্তাহিক আজকাল কর্তৃক সর্বসত্ব ® সংরক্ষিত
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -231,11 +230,11 @@ const Footer = () => {
             <div className="row">
               <div className="col-lg-12 ps-0">
                 <div className="d-flex justify-content-between align-items-center p-2 ps-0">
-                  <p className="text-start mb-0" style={{ color: "#fff" }}>
+                  <div className="text-start mb-0" style={{ color: "#fff" }}>
                     এই ওয়েবসাইটের কোনো লেখা, ছবি, অডিও, ভিডিও অনুমতি ছাড়া
                     ব্যবহার বেআইনি।
-                  </p>
-                  <p className="text-white text-end mb-0 d-lg-block d-none">
+                  </div>
+                  <div className="text-white text-end mb-0 d-lg-block d-none">
                     Developed With Love By
                     <a
                       className="ps-2"
@@ -246,8 +245,8 @@ const Footer = () => {
                     >
                       Galaxy Media
                     </a>
-                  </p>
-                  <p className="text-white text-end mb-0 d-lg-none d-block">
+                  </div>
+                  <div className="text-white text-end mb-0 d-lg-none d-block">
                     Developed With Love By
                     <a
                       className="ps-2"
@@ -258,7 +257,7 @@ const Footer = () => {
                     >
                       Galaxy Media
                     </a>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>

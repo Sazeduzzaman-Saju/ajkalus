@@ -1,20 +1,31 @@
+// components/DecreaseFontSizeButton.js
 "use client";
 
 import React from "react";
-import { FaNotEqual } from "react-icons/fa";
+import { FaSortAmountDownAlt } from "react-icons/fa";
 
 const DecreaseFontSizeButton = () => {
   const decreaseFontSize = () => {
     const newsContent = document.getElementById("news-content");
     if (newsContent) {
-      const currentSize = parseFloat(window.getComputedStyle(newsContent).fontSize);
-      newsContent.style.fontSize = `${currentSize - 2}px`;
+      const currentSize = parseFloat(
+        window.getComputedStyle(newsContent).fontSize
+      );
+      if (currentSize > 10) {
+        // Prevent font size from becoming too small
+        newsContent.style.fontSize = `${currentSize - 2}px`;
+      }
     }
   };
 
   return (
-    <button onClick={decreaseFontSize} aria-label="Decrease font size">
-      <FaNotEqual />
+    <button
+      className="btn btn-sm me-2 text-site border"
+      onClick={decreaseFontSize}
+      title="Decrease Font Size"
+      aria-label="Decrease font size"
+    >
+      <FaSortAmountDownAlt />
     </button>
   );
 };

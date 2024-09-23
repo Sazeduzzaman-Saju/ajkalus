@@ -16,9 +16,9 @@ const page = () => {
                   <div className="col-lg-6">
                     <div className="text-center py-2">
                       <h3 className="text-muted mb-0">লগিন করুন !</h3>
-                      <p className="text-muted mb-0">
+                      <div className="text-muted mb-0">
                         সাপ্তাহিক আজকালে আপনাকে স্বাগতম।
-                      </p>
+                      </div>
                     </div>
                     <div className="row mt-5">
                       <div className="col-lg-10 offset-1 mx-auto">
@@ -32,7 +32,7 @@ const page = () => {
                         <h1 className="text-center">
                           ফিরে আসার জন্য <br /> স্বাগত!
                         </h1>
-                        <p className="text-center pt-3">
+                        <div className="text-center pt-3">
                           যদি আপনার বিজ্ঞাপনের তথ্য প্রয়োজন হয়, তবে আপনার লগইনের
                           পরে আপনার অ্যাকাউন্টে দেখানো হবে। <br/> অথবা
                           <Link href="/accounts" className="ps-2">
@@ -40,7 +40,7 @@ const page = () => {
                               এখানে ক্লিক করুন
                             </span>
                           </Link>
-                        </p>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -1,9 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import './CategoryCards.css'
 import Skeleton from "react-loading-skeleton"; // Import the Skeleton component
+import { Image } from "react-bootstrap";
 
-const FeatureCategory = ({ nonFeaturedItemsSliced, latestFeaturedItem, loading }) => {
+const FeatureCategory = ({
+  nonFeaturedItemsSliced,
+  latestFeaturedItem,
+  loading,
+}) => {
   return (
     <div className="row">
       <div className="col-xl-6">
@@ -20,8 +25,7 @@ const FeatureCategory = ({ nonFeaturedItemsSliced, latestFeaturedItem, loading }
             <Link href={`/news-detail/${latestFeaturedItem?.id}`}>
               <Image
                 src={`https://ajkal.us/img/news/${latestFeaturedItem.title_img}`}
-                width={300}
-                height={310}
+                className="img-fluid"
                 alt="Category Feature"
               />
               <div className="card-body feature-info">
@@ -30,7 +34,7 @@ const FeatureCategory = ({ nonFeaturedItemsSliced, latestFeaturedItem, loading }
             </Link>
           </div>
         ) : (
-          <p>No featured news available</p>
+          <div>No featured news available</div>
         )}
       </div>
       <div className="col-lg-6">
@@ -53,9 +57,9 @@ const FeatureCategory = ({ nonFeaturedItemsSliced, latestFeaturedItem, loading }
                   <div className="card border-0 shadow-sm rounded-0 single-category">
                     <Image
                       src={`https://ajkal.us/img/news/${item.title_img}`}
-                      layout="responsive"
                       width={300}
                       height={300}
+                      className="img-fluid"
                       alt="Category Feature"
                     />
                     <div className="card-body">
@@ -66,7 +70,7 @@ const FeatureCategory = ({ nonFeaturedItemsSliced, latestFeaturedItem, loading }
               </div>
             ))
           ) : (
-            <p>No non-featured news available</p>
+            <div>No non-featured news available</div>
           )}
         </div>
       </div>

@@ -5,7 +5,6 @@ import NonFeaturesCategory from "./NonFeaturesCategory";
 import FeatureCategory from "./FeatureCategory";
 
 const CategoryCards = ({ CategoryList }) => {
-  
   // Filter the items based on `is_featured`
   const featuredItems =
     CategoryList?.filter((item) => item.is_featured === 1) || [];
@@ -34,9 +33,9 @@ const CategoryCards = ({ CategoryList }) => {
             <div className="my-3">
               <Image
                 src="https://ajkal.us/img/ad/17157531697629499.webp"
-                layout="responsive"
                 width={300}
                 height={300}
+                className="img-fluid"
                 alt="Category Feature"
               />
             </div>

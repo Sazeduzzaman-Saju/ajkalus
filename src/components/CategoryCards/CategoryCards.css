@@ -9,6 +9,7 @@
 }
 
 .single-category {
+  width: 100%;
   height: 200px;
 }
 .single-category-feature img{
