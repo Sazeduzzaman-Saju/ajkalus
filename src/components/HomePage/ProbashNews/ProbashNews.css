@@ -2,6 +2,11 @@
   height: 450px;
   max-height: 100%;
 }
-.probash-nonfeature{
-    height: 215px;
+.probash-nonfeature {
+  height: 215px;
+}
+.sara-bangla {
+  height: 515px;
+  object-fit: cover;
+  max-height: 100%;
 }

@@ -59,7 +59,7 @@ const FeatureCategory = ({
                       src={`https://ajkal.us/img/news/${item.title_img}`}
                       width={300}
                       height={300}
-                      className="img-fluid"
+                      className="img-fluid single-category-non-img"
                       alt="Category Feature"
                     />
                     <div className="card-body">

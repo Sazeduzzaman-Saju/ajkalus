@@ -1,7 +1,8 @@
 import formatDateToBengali from "@/utility/AdorshoLipi/Time/formatDateToBengali";
-import Image from "next/image";
+import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 import Link from "next/link";
 import React from "react";
+import "./CategoryCards.css";
 
 const NonFeaturesCategory = ({ nonFeaturedItemsSlicednews }) => {
   return (
@@ -30,14 +31,11 @@ const NonFeaturesCategory = ({ nonFeaturedItemsSlicednews }) => {
                       </div>
                     </div>
                     <div className="col-md-5">
-                      <Image
-                        className="img-fluid"
+                      <FallbackImages
                         src={`https://ajkal.us/img/news/${item.title_img}`}
                         width={300}
-                        height={300}
+                        height={100}
                         className="img-fluid"
-                        alt="Category Feature"
-                         
                       />
                     </div>
                   </div>

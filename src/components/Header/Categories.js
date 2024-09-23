@@ -39,7 +39,7 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="container-fluid main-menu mobile-none">
+    <div className="container-fluid main-menu mobile-none sticky-top ">
       <div className="container">
         <div className="d-flex justify-content-center">
           <ul className="navbar-nav mx-auto d-flex">

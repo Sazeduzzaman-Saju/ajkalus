@@ -22,19 +22,6 @@ const AddWithSidebar = () => {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="d-flex justify-content-center mb-4">
-              <Image
-                src="https://tpc.googlesyndication.com/simgad/18173373242370806951"
-                alt="Add One"
-                className="img-fluid"
-              ></Image>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

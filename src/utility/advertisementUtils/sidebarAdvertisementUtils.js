@@ -23,7 +23,7 @@ export const filterSidebarAdvertisements = (advertisementList, positions) => {
       : [
           {
             id: position,
-            ad_banner: "settings/ad-placeholder.jpg",
+            ad_banner: "https://ajkal.us/img/ad/",
             ad_position: position,
           },
         ];

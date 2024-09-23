@@ -4,6 +4,7 @@ import Link from "next/link";
 import advertisementApi from "@/utility/advertisementApi/advertisementApi";
 import { filterSidebarAdvertisements } from "@/utility/advertisementUtils/sidebarAdvertisementUtils";
 import "./sidebar.css";
+import { Image } from "react-bootstrap";
 
 export async function generateStaticParams() {
   let sidebarAdvertisementData = await advertisementApi();
@@ -14,7 +15,7 @@ export default async function Sidebar() {
   let sidebarAdvertisementData = await advertisementApi();
 
   // Define sidebar positions dynamically
-  const numberOfPositions = 10; // Change this to the desired number of positions
+  const numberOfPositions = 7; // Change this to the desired number of positions
   const positions = Array.from(
     { length: numberOfPositions },
     (_, i) => `Sidebar${i + 1}`
@@ -28,7 +29,7 @@ export default async function Sidebar() {
   return (
     <div>
       <SectionHeader title="বিজ্ঞাপন কর্নার।" />
-      <div className="row justify-content-center mx-auto">
+      <div className="row justify-content-center mx-auto mb-3">
         <div className="col-xl-12 px-0">
           <div className="">
             <div className="card border-0">
@@ -115,6 +116,25 @@ export default async function Sidebar() {
             </div>
           </div>
         </div>
+        <div className="col-lg-12 px-0 mt-4">
+            <div
+              className="card"
+              style={{ height: "550", overflow: "hidden" }}
+            >
+              <h3 className="text-center pt-3">
+                আজকাল <span className="epaper_text">ই</span> পেপার
+              </h3>
+              <Link href={'/epaper'}>
+                <Image
+                  className="img-fluid"
+                  src="https://ajkal.us/img/epaper/17139742637427437.jpg"
+                  alt="E-paper Link"
+                  title="Prayer Time Shedule"
+                />
+              </Link>
+            </div>
+          </div>
+
         <div className="col-xl-12 px-0">
           {/* Sidebar advertisement start */}
           {validAdvertisements.map((ad, index) => {
@@ -127,7 +147,7 @@ export default async function Sidebar() {
             return (
               <div key={ad.id} className="advertisement-container">
                 {isExpired ? (
-                  <img
+                  <Image
                     src={`https://ajkal.us/img/ad/${ad.ad_banner}`} // Fallback image for expired ads
                     alt="Fallback Advertisement"
                     className="img-fluid w-100 mx-auto"
@@ -135,7 +155,7 @@ export default async function Sidebar() {
                     title="Advertisement expired"
                   />
                 ) : (
-                  <img
+                  <Image
                     src={"https://i.ibb.co.com/qFSNHWt/ad-placeholder-2.jpg"}
                     alt={"Advertisement asdasdasd"}
                     className="img-fluid mt-2 pt-1"

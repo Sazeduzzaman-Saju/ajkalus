@@ -29,12 +29,13 @@ const Sakkhatkar = ({ newsData }) => {
                     height={160}
                   />
                   <div className="card-body">
-                    <h4
-                      className="news-short-brief"
+                    {/* <h4
+                      className="news-short-brief text-site"
                       dangerouslySetInnerHTML={{
                         __html: truncateText(newsItem.news_title, 5),
                       }}
-                    />
+                    /> */}
+                    <h5 className="news-short-brief text-site">{newsItem.news_title}</h5>
                   </div>
                 </div>
               </div>

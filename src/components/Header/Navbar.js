@@ -28,7 +28,7 @@ export default async function Navbar() {
   const remainingDays = calculateRemainingDays(advertisementData);
 
   return (
-    <div className="container-fluid bg-light sticky-top shadow-sm">
+    <div className="container-fluid bg-light shadow-sm">
       <nav className="navbar navbar-expand-lg bg-body-tertiary py-0">
         <div className="container px-0">
           <div className="d-flex justify-content-between align-items-center mobile-triger">

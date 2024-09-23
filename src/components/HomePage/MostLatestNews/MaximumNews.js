@@ -17,7 +17,7 @@ export default async function MaximumNews() {
     <div className="container">
       <div className="row align-items-center">
         {slicedNewsData.map((item) => (
-          <div className="col-md-12" key={item.id}>
+          <div className="col-md-12 px-0" key={item.id}>
             <MaximumSingleNews newsItem={item} /> {/* Pass each news item */}
           </div>
         ))}

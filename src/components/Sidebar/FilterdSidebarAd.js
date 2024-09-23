@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'react-bootstrap';
 
 const FilterdSidebarAd = ({filteredAdvertisements}) => {
     return (
@@ -6,7 +7,7 @@ const FilterdSidebarAd = ({filteredAdvertisements}) => {
             {filteredAdvertisements.map((ads, index) =>
             ads.map((ad) => (
               <div key={ad.id} className="advertisement-container">
-                <img
+                <Image
                   src={`https://ajkal.us/img/ad/${ad.ad_banner}`} // Ensure the URL structure is correct
                   alt={`Advertisement ${index + 1}`}
                   className="img-fluid mt-2 pt-1"
