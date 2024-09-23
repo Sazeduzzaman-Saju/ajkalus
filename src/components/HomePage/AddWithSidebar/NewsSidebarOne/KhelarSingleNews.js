@@ -12,7 +12,7 @@ const KhelarSingleNews = ({ featuredOne, featuredTwo, error }) => {
   if (error) return <div>{error}</div>; // Show error if fetching fails
   //(featuredOne,featuredTwo)
   return (
-    <div>
+    <div className="">
       <div className="row mb-4">
         {/* Show the first featured item (is_featured == 1) */}
         {loading ? (

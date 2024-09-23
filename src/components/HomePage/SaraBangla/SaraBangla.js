@@ -3,7 +3,7 @@ import React from 'react';
 
 const SaraBangla = () => {
     return (
-        <div>
+        <div className='px-2'>
            <SectionHeader title='সারা বাংলা।'/>
         </div>
     );
