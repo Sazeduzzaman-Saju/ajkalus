@@ -8,7 +8,6 @@ export async function generateStaticParams() {
 
 export default async function DhormoNews() {
   let dhormoData = await dhormoCatNewsApi();
-  console.log(dhormoData);
   return (
     <div className="">
       <div className="container">

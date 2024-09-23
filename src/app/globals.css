@@ -80,3 +80,8 @@ p {
 .submit-btn-one:active {
   transform: scale(0.95);
 }
+@media screen and (max-width: 575.98px) {
+  .mobile-none {
+    display: none !important;
+  }
+}

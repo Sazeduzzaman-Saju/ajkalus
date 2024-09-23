@@ -4,7 +4,6 @@ import "./ProbashNews.css";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 
 const ProbashSingleNews = ({ probashData }) => {
-  console.log(probashData);
 
   const probashDataFeature = probashData.filter(
     (news) => news.is_featured === 1

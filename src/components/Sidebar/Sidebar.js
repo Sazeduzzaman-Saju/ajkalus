@@ -1,10 +1,31 @@
 import React from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import { Image } from "react-bootstrap";
-import './sidebar.css';
+import "./sidebar.css";
 import Link from "next/link";
+import advertisementApi from "@/utility/advertisementApi/advertisementApi";
+import {
+  calculateRemainingDays,
+  filterValidAdvertisements,
+} from "@/utility/advertisementUtils/advertisementUtils";
 
-const Sidebar = () => {
+export async function generateStaticParams() {
+  let advertisementList = await advertisementApi();
+  return advertisementList;
+}
+
+export default async function Sidebar() {
+  let advertisementList = await advertisementApi();
+
+  // Specify the position you want to filter for
+  const position = "HeaderTop"; // Change this for different pages or components
+  const validAdvertisements = filterValidAdvertisements(
+    advertisementList,
+    position
+  );
+  const advertisementData =
+    validAdvertisements.length > 0 ? validAdvertisements[0] : null;
+  const remainingDays = calculateRemainingDays(advertisementData);
   return (
     <div>
       <SectionHeader title="বিজ্ঞাপন কর্নার।" />
@@ -17,13 +38,13 @@ const Sidebar = () => {
                 style={{ backgroundColor: "rgb(220, 35, 41)" }}
               >
                 <div className="py-2 mb-0 text-center text-white">
-                  গুরুত্বপূর্ণ 
+                  গুরুত্বপূর্ণ
                 </div>
               </div>
               <div className="card-body p-3 sidebar_bigapon_area">
                 <div className="p-3 px-3">
                   <div className="mx-4 mb-2">
-                  <Link href="/ad-rate-print">
+                    <Link href="/ad-rate-print">
                       <div className="d-flex align-items-center">
                         <div className="sidebar_menu_icons py-3 px-3 text-center">
                           <svg
@@ -107,6 +128,7 @@ const Sidebar = () => {
           ></iframe>
         </div>
         <div className="col-xl-12 px-0">
+          {/* Sidebar advertisement start */}
           <Image
             src="https://tpc.googlesyndication.com/simgad/17948013078181412381"
             alt="Add One"
@@ -128,10 +150,9 @@ const Sidebar = () => {
             className="img-fluid mt-2 pt-1"
             
           ></Image> */}
+          {/* Sidebar advertisement end */}
         </div>
       </div>
     </div>
   );
-};
-
-export default Sidebar;
+}

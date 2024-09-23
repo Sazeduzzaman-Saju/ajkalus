@@ -61,13 +61,12 @@
 
 .search-btn {
   display: inline-block;
-  margin: 0.25rem 0.125rem;
   background-color: var(--main);
   font-size: 0.875rem;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 12px;
-  height: 45px;
+  padding-top: 35px;
+  height: 90px;
   text-align: center;
   color: #fff;
   text-decoration: none;
@@ -79,7 +78,6 @@
   overflow: hidden;
   transition: box-shadow 0.3s ease-in-out;
 }
-
 .search-btn::before {
   content: "";
   position: absolute;
@@ -103,7 +101,7 @@
 }
 
 /* Top Bar Styles */
-.drop-menus-items a{
+.drop-menus-items a {
   color: #242323;
 }
 .menu-specing {
