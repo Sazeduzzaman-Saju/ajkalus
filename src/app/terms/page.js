@@ -20,7 +20,7 @@ const page = () => {
 
               <div>
                 These terms and conditions outline the rules and regulations for
-                the use of Weekly Ajkal's Website, located at
+                the use of Weekly {"Ajkal's"} Website, located at
                 https://ajkalusa.com
               </div>
 
@@ -55,7 +55,7 @@ const page = () => {
 
               <div>
                 We employ the use of cookies. By accessing Weekly Ajkal, you
-                agreed to use cookies in agreement with the Weekly Ajkal's
+                agreed to use cookies in agreement with the Weekly {"Ajkal's"}
                 Privacy Policy.{" "}
               </div>
 
@@ -241,7 +241,7 @@ const page = () => {
               </ul>
 
               <div>
-                No use of Weekly Ajkal's logo or other artwork will be allowed
+                No use of Weekly {"Ajkal's"} logo or other artwork will be allowed
                 for linking absent a trademark license agreement.
               </div>
 

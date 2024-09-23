@@ -16,12 +16,14 @@ const NewsSidebarThree = async () => {
     error = "Failed to fetch data";
   }
 
-  if (error) return <p>{error}</p>;
+  if (error) return <div>{error}</div>;
 
   return (
-    <div>
-      <SectionHeader title="লাইফস্টাইল" />
-      <LifeStyleNews newsData={newsData} />
+    <div className="container">
+      <div className="shadow-sm mb-4">
+        <SectionHeader title="লাইফস্টাইল || Lifestyle" />
+        <LifeStyleNews newsData={newsData} />
+      </div>
     </div>
   );
 };

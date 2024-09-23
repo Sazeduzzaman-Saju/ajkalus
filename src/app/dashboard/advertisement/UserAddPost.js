@@ -33,9 +33,9 @@ const UserAddPost = () => {
                 // aria-invalid={errors.pay_amount ? "true" : "false"}
               />
               {/* {errors.pay_amount?.type === "required" && (
-                <p role="alert" className="text-danger">
+                <div role="alert" className="text-danger">
                   পে-এমাউন্ট দিন!
-                </p>
+                </div>
               )} */}
             </div>
             <div className="col-lg-4 mb-3">
@@ -49,9 +49,9 @@ const UserAddPost = () => {
                 // aria-invalid={errors.total_payment ? "true" : "false"}
               />
               {/* {errors.total_payment?.type === "required" && (
-                <p role="alert" className="text-danger">
+                <div role="alert" className="text-danger">
                   টোটাল পেমেন্ট দিন।
-                </p>
+                </div>
               )} */}
             </div>
             <div className="col-lg-4 mb-3">
@@ -65,9 +65,9 @@ const UserAddPost = () => {
                 // aria-invalid={errors.ad_banner ? "true" : "false"}
               />
               {/* {errors.ad_banner?.type === "required" && (
-                <p role="alert" className="text-danger">
+                <div role="alert" className="text-danger">
                   এড ব্যানার দিন!
-                </p>
+                </div>
               )} */}
             </div>
             <div className="col-lg-4 mb-3">
@@ -81,9 +81,9 @@ const UserAddPost = () => {
                 // aria-invalid={errors.ad_link ? "true" : "false"}
               />
               {/* {errors.ad_link?.type === "required" && (
-                <p role="alert" className="text-danger">
+                <div role="alert" className="text-danger">
                   এড এর লিংক!
-                </p>
+                </div>
               )} */}
             </div>
             <div className="col-lg-2 mb-3">
@@ -97,9 +97,9 @@ const UserAddPost = () => {
                 // aria-invalid={errors.duration ? "true" : "false"}
               />
               {/* {errors.duration?.type === "required" && (
-                <p role="alert" className="text-danger">
+                <div role="alert" className="text-danger">
                   এড এর ডিউরেশন!
-                </p>
+                </div>
               )} */}
             </div>
             <div className="col-lg-2 mb-3">
@@ -111,9 +111,9 @@ const UserAddPost = () => {
                 // aria-invalid={errors.start_date ? "true" : "false"}
               />
               {/* {errors.start_date?.type === "required" && (
-                <p role="alert" className="text-danger">
+                <div role="alert" className="text-danger">
                   এড স্টার্ট ডেট দিন!
-                </p>
+                </div>
               )} */}
             </div>
           </div>

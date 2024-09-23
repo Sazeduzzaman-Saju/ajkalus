@@ -6,17 +6,6 @@ const EpaperFeature = () => {
     <div>
       <div className="row justify-content-center mx-auto">
         <div className="col-xl-12 px-0">
-          <iframe
-            width="100%"
-            height="300"
-            src={`https://www.youtube.com/embed/_U_TCak8ovo?si=5tMu37JIQeVDmfIK`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-        <div className="col-xl-12 px-0">
           <Image
             src="https://tpc.googlesyndication.com/simgad/17948013078181412381"
             alt="Add One"
@@ -37,6 +26,17 @@ const EpaperFeature = () => {
             alt="Add Three"
             className="img-fluid mt-2 pt-1"
           ></Image>
+        </div>
+        <div className="col-xl-12 px-0">
+          <iframe
+            width="100%"
+            height="300"
+            src={`https://www.youtube.com/embed/_U_TCak8ovo?si=5tMu37JIQeVDmfIK`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>

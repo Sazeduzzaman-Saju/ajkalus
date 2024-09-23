@@ -1,25 +1,27 @@
 // app/middleware.js
 
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export function middleware(req) {
-  // TODO : check the login info or jwt and another checking info 
+  // TODO : check the login info or jwt and another checking info
   // then opne the private route security
   // const token = req.cookies.get('authToken');
-  const token = false
+  const token = false;
 
   const url = req.nextUrl.clone();
-  const protectedRoutes = ['/dashboard']; 
-  if (protectedRoutes.some((route) => url.pathname.startsWith(route)) && !token) {
-    url.pathname = 'login'; // Redirect to login page
-    return NextResponse.redirect(url); 
+  const protectedRoutes = ["/dashboard"];
+  if (
+    protectedRoutes.some((route) => url.pathname.startsWith(route)) &&
+    !token
+  ) {
+    url.pathname = "login"; // Redirect to login page
+    return NextResponse.redirect(url);
   }
 
   return NextResponse.next();
 }
 
-
 // Protect these routes path
 export const config = {
-  matcher: ['/dashboard/:path*'], 
+  matcher: ["/dashboard/:path*"],
 };

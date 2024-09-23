@@ -1,8 +1,8 @@
 import React from "react";
-import Sidebar from "@/components/Sidebar/Sidebar";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import EpaperFeature from "./EpaperFeature";
 import SingleEpaper from "@/components/EpaperSlider/SingleEpaper";
+import DetailsSidebar from "@/components/Sidebar/DetailsSidebar";
 
 export default async function page() {
   const route = `https://backoffice.ajkal.us/all-epapers`;
@@ -37,7 +37,7 @@ export default async function page() {
           <SingleEpaper epaperList={epaperList}/>
         </div>
         <div className="col-md-2">
-          <Sidebar />
+          <DetailsSidebar/>
         </div>
       </div>
     </div>

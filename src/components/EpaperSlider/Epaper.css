@@ -31,13 +31,29 @@
   color: #eee;
   font-size: 20px !important;
 }
-/* .swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  left: 0 !important;
-  right: 0;
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: red;
+  width: 25px !important;
+  height: 25px !important;
+  border: 5px solid var(--main) !important;
+  position: relative;
+  top: 6px;
 }
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  left: 0;
-  right: 0 !important;
-} */
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  background: var(--secondary);
+  width: 10px;
+  height: 10px;
+  border: 3px solid transparent;
+}
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 15;
+  position: relative;
+  top: 15px !important;
+  height: 50px;
+}

@@ -4,6 +4,11 @@ import FeatureNews from "./FeatureNews/FeatureNews";
 import MostLatestNews from "./MostLatestNews/MostLatestNews";
 import BinodonNews from "./BinodonNews/BinodonNews";
 import AddWithSidebar from "./AddWithSidebar/AddWithSidebar";
+import DhormoNews from "./DhormoNews/DhormoNews";
+import NewsSidebarThree from "./AddWithSidebar/NewsSidebarOne/NewsSidebarThree";
+import NewWorkSection from "./AddWithSidebar/NewsSidebarOne/NewYorkSection";
+import ProbashNews from "./ProbashNews/ProbashNews";
+import SakkhatkarNews from "./AddWithSidebar/NewsSidebarOne/SakkhatkarNews";
 
 const Home = () => {
   return (
@@ -11,8 +16,13 @@ const Home = () => {
       <Banner></Banner>
       <FeatureNews />
       <MostLatestNews />
+      <NewWorkSection />
+      <AddWithSidebar />
       <BinodonNews />
-      <AddWithSidebar/>
+      <DhormoNews />
+      <NewsSidebarThree />
+      <ProbashNews />
+      <SakkhatkarNews/>
     </div>
   );
 };

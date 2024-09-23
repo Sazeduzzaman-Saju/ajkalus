@@ -32,13 +32,13 @@ const BreakingNews = () => {
 
   return (
     <div className="container-fluid bg-light">
-      <div className="container main-menu-2">
+      <div className="container main-menu-2 rounded-2 mt-1 mb-0">
         <div className="top-bar-area align-items-center">
           <div className="row p-2 px-0">
             <div className="col-lg-12">
               <div className="d-flex align-items-center">
                 <div className="breaking-text">
-                  <p className="marques-text-title mb-0">ব্রেকিং নিউজঃ </p>
+                  <div className="marques-text-title mb-0">ব্রেকিং নিউজঃ </div>
                 </div>
                 <div className="breaking-news pe-0">
                   <div style={{ borderLeft: "3px solid white" }}>
@@ -48,7 +48,7 @@ const BreakingNews = () => {
                         breakingNews.map((item, index) => (
                           <span key={index} className="">
                             <Link
-                              href={`/${item.category_name}/${item.id}`} // Use href instead of to
+                              href={`/news-detail/${item.id}`} // Use href instead of to
                               style={{
                                 color: "inherit",
                                 textDecoration: "none",

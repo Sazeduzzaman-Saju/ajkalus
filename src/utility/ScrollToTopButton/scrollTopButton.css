@@ -1,0 +1,19 @@
+.scrollTop {
+    background-color: var(--main);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0.5;
+    transition: opacity 0.3s; /* Smooth transition */
+  }
+  
+  .scrollTop:hover {
+    opacity: 1; /* Change opacity on hover */
+  }
+  

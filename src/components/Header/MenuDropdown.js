@@ -10,7 +10,7 @@ function MenuDropdown({ extraNav }) {
         variant="success"
         id="dropdown-basic"
       >
-        অন্যান্য +
+        অন্যান্য 
       </Dropdown.Toggle>
 
       <Dropdown.Menu>

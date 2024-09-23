@@ -31,19 +31,19 @@ export default async function page({params}) {
               <div className="card border-0 rounded-1 shadow-sm">
                 <div className="card-body info-cards d-flex justify-content-between  align-items-center ">
                   <div>
-                    <p className="icon-container">
+                    <div className="icon-container">
                       <FaFileUpload></FaFileUpload>
-                    </p>
+                    </div>
                     <h4 className="pt-3">সংবাদ পোস্ট।</h4>
                   </div>
-                  <p className="icon-container-amount">
+                  <div className="icon-container-amount">
                     58
                     {/* {userNewsData !== null ? (
                       <span  >{userNewsData.length}</span>
                     ) : (
                       <Skeleton height={10}></Skeleton>
                     )} */}
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -51,19 +51,19 @@ export default async function page({params}) {
               <div className="card border-0 rounded-1 shadow-sm">
                 <div className="card-body info-cards d-flex justify-content-between  align-items-center ">
                   <div>
-                    <p className="icon-container">
+                    <div className="icon-container">
                       <BiRightArrow></BiRightArrow>
-                    </p>
+                    </div>
                     <h4 className="pt-3">মোট বিজ্ঞাপন পোস্ট।</h4>
                   </div>
-                  <p className="icon-container-amount">
+                  <div className="icon-container-amount">
                     52
                     {/* {userAddData !== null ? (
                       <span  >{userAddData.length}</span>
                     ) : (
                       <Skeleton height={10}></Skeleton>
                     )} */}
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>

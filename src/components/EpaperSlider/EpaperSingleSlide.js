@@ -5,8 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Image from "next/image";
-import './Epaper.css'
+import "./Epaper.css";
+import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 
 const EpaperSingleSlide = ({ epaperList }) => {
   return (
@@ -28,8 +28,8 @@ const EpaperSingleSlide = ({ epaperList }) => {
         {epaperList.length > 0 ? (
           epaperList.map((epaper, index) => (
             <SwiperSlide key={index}>
-              <div className="card rounded-1 border-0 shadow-sm feature-cards">
-                <Image
+              <div className="card rounded-1 border-0 feature-cards">
+                {/* <Image
                   src={`https://ajkal.us/img/epaper/${epaper.epaper_image}`}
                   alt={epaper.name}
                   title={epaper.news_title}
@@ -37,16 +37,20 @@ const EpaperSingleSlide = ({ epaperList }) => {
                   width={1325}
                   height={2048}
                   style={{ objectFit: "cover" }}
-                  onError={(e) => {
-                    e.currentTarget.src =
-                      "https://ajkal.us/img/settings/placeholder.jpg";
-                  }}
+                /> */}
+                <FallbackImages
+                  src={`https://ajkal.us/img/epaper/${epaper.epaper_image}`}
+                  alt={epaper.name}
+                  title={epaper.news_title}
+                  className="img-fluid"
+                  width={1325}
+                  height={2048}
                 />
               </div>
             </SwiperSlide>
           ))
         ) : (
-          <p>No epapers available</p>
+          <div>No epapers available</div>
         )}
       </Swiper>
     </div>

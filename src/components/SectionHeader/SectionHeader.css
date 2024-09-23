@@ -22,3 +22,6 @@
   align-items: center;
   color: white; /* Ensuring text stays visible over gradient */
 }
+.section-header{
+  font-size: 22px;
+}

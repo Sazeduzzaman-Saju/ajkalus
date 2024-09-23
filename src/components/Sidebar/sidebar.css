@@ -1,0 +1,16 @@
+.sidebar_bigapon_area {
+    background-image: url(https://st2.depositphotos.com/1014528/11870/v/450/depositphotos_118709216-stock-illustration-abstract-blue-waves-data-stream.jpg);
+}
+.sidebar_menu_links {
+    background-color: var(--main);
+    display: block;
+    color: #eee;
+    width: 80%;
+}
+.sidebar_menu_icons {
+    background-color: var(--secondary);
+    color: #eee;
+}
+.sidebar_menu_links span{
+    font-size: 12px;
+}

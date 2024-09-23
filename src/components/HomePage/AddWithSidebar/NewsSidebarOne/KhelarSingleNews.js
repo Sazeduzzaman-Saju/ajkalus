@@ -1,17 +1,18 @@
 // NewsSidebarTwo.js
 import React from "react";
-import { Image } from "react-bootstrap";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css"; // Import styles if you're using the package
 import Link from "next/link";
+import truncateText from "@/utility/truncateWord/truncateText";
+import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 
 const KhelarSingleNews = ({ featuredOne, featuredTwo, error }) => {
   const loading = !featuredOne && featuredTwo.length === 0; // Determine loading state based on data
 
-  if (error) return <p>{error}</p>; // Show error if fetching fails
-//(featuredOne,featuredTwo)
+  if (error) return <div>{error}</div>; // Show error if fetching fails
+  //(featuredOne,featuredTwo)
   return (
-    <div>
+    <div className="">
       <div className="row mb-4">
         {/* Show the first featured item (is_featured == 1) */}
         {loading ? (
@@ -23,23 +24,27 @@ const KhelarSingleNews = ({ featuredOne, featuredTwo, error }) => {
           <div className="col-lg-5">
             <Link href={`/news-detail/${featuredOne.id}`}>
               <div className="card border-0 shadow-sm">
-                <Image
-                  className="img-fluid feature-khela"
+                <FallbackImages
                   src={`https://ajkal.us/img/news/${featuredOne.title_img}`}
                   alt={featuredOne.news_title}
-                  width={800}
-                  height={400}
                   title={featuredOne.news_title}
+                  width={800}
+                  className="feature-khela img-fluid"
+                  height={400}
                 />
                 <div className="card-body">
-                  <h4 className="card-title text-site">{featuredOne.news_title}</h4>
-                  <p className="card-text">{featuredOne.news_short_brief}</p>
+                  <h4 className="card-title text-site">
+                    {featuredOne.news_title}
+                  </h4>
+                  <div className="card-text">
+                    {truncateText(featuredOne.news_short_brief, 30)}
+                  </div>
                 </div>
               </div>
             </Link>
           </div>
         ) : (
-          <p>No featured news found.</p>
+          <div>No featured news found.</div>
         )}
 
         {/* Show up to 6 items with is_featured == 2 */}
@@ -61,14 +66,13 @@ const KhelarSingleNews = ({ featuredOne, featuredTwo, error }) => {
                     <Link href={`/news-detail/${item.id}`}>
                       <div className="card border-0 shadow-sm kheladhula mt-2">
                         <div className="card-body p-0">
-                          <Image
-                            className="img-fluid khela-img"
+                          <FallbackImages
                             src={`https://ajkal.us/img/news/${item.title_img}`}
                             alt={item.news_title}
-                            width={800}
-                            style={{ objectFit: "cover" }}
-                            height={400}
                             title={item.news_title}
+                            className="img-fluid khela-img"
+                            width={800}
+                            height={400}
                           />
                           <div className="p-3">
                             <h6 className="mb-0 fw-semibold text-site">
@@ -82,7 +86,7 @@ const KhelarSingleNews = ({ featuredOne, featuredTwo, error }) => {
                 </div>
               ))
             ) : (
-              <p>No featured news available.</p>
+              <div>No featured news available.</div>
             )}
           </div>
         </div>
