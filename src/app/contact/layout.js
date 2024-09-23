@@ -1,5 +1,8 @@
 import Head from "next/head";
 
+
+// TODO: dynamic metadata 
+
 export const metadata = {
   title: "সাপ্তাহিক আজকাল :: Weekly Ajkal",
   description:
