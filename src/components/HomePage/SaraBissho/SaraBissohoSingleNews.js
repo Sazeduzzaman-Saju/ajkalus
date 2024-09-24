@@ -12,7 +12,7 @@ const SaraBisshoSingleNews = ({ saraBisshoNewsData }) => {
   );
 
   // Log the filtered news for debugging
-  console.log(saraBisshoNewsFeature, "Featured News");
+  // console.log(saraBisshoNewsFeature, "Featured News");
 
   return (
     <div>

@@ -12,7 +12,7 @@ const SaraBanglaSingleNews = ({ sarabanglaNewsData }) => {
   );
 
   // Log the filtered news for debugging
-  console.log(sarabanglaNewsFeature, "Featured News");
+  // console.log(sarabanglaNewsFeature, "Featured News");
 
   return (
     <div>
