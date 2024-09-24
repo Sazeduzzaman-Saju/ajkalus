@@ -1,10 +1,9 @@
 import Head from "next/head";
 
-
-// TODO: dynamic metadata 
+// TODO: dynamic metadata
 
 export const metadata = {
-  title: "সাপ্তাহিক আজকাল :: Weekly Ajkal",
+  title: "Contact Page :: Weekly Ajkal",
   description:
     "বাংলাদেশ ও বিশ্বসংবাদ সম্পর্কে সর্বশেষ আপডেট জানুন। এখানে পাবেন খেলাধুলা, রাজনীতি, চাকরি, বিনোদন, স্বাস্থ্য, লাইফস্টাইল এবং আরও অনেক কিছু।",
   keywords:
@@ -39,7 +38,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.ajkal.us/contact"/>
+        <link rel="canonical" href="https://www.ajkal.us/contact" />
         <meta name="robots" content="index, follow" />
       </Head>
       {children}

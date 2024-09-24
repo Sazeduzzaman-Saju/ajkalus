@@ -24,7 +24,7 @@ export default async function BinodonNews() {
   return (
     <>
       <div className="container">
-        <SectionHeader title="বিনোদন || Entertainment News" />
+        <SectionHeader title="বিনোদন" />
         <div className="row">
           <div className="col-xl-7">
             <div className="row">

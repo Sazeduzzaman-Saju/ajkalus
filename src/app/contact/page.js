@@ -1,42 +1,9 @@
-import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
 const page = () => {
   return (
     <>
-      <Head>
-        <title>Contact Us - Ajkal USA</title>
-        <meta
-          name="description"
-          content="Contact Ajkal USA for inquiries and information."
-        />
-        <meta name="keywords" content="Ajkal, USA, contact, inquiries" />
-        <meta name="author" content="Ajkal USA" />
-        {/* Open Graph tags */}
-        <meta property="og:title" content="Contact Us - Ajkal USA" />
-        <meta
-          property="og:description"
-          content="Contact Ajkal USA for inquiries and information."
-        />
-        <meta
-          property="og:image"
-          content="https://your-site.com/path-to-your-image.jpg"
-        />
-        <meta property="og:url" content="https://your-site.com/contact" />
-        <meta property="og:type" content="website" />
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Us - Ajkal USA" />
-        <meta
-          name="twitter:description"
-          content="Contact Ajkal USA for inquiries and information."
-        />
-        <meta
-          name="twitter:image"
-          content="https://your-site.com/path-to-your-image.jpg"
-        />
-      </Head>
       <div>
         <div className="container">
           <div className="row my-5">

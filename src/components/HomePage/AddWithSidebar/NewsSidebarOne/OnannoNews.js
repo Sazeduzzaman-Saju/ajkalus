@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "./NesSideBarOne.css";
 import FallbackImages from "@/utility/FallBackImage/FallBackImages";
+import formatDate from "@/utility/AdorshoLipi/Time/fornatDate";
 
 const OnannoNews = ({ data17 }) => {
   const getFeaturedItems = (data, isFeatured, limit = null) => {
@@ -15,12 +16,6 @@ const OnannoNews = ({ data17 }) => {
       return sorted.length > 0 ? [sorted[0]] : [];
     }
     return limit ? filtered.slice(0, limit) : filtered;
-  };
-
-  const formatDate = (dateString) => {
-    const options = { day: "2-digit", month: "short", year: "numeric" };
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-GB", options);
   };
 
   const truncateText = (text, wordLimit) => {

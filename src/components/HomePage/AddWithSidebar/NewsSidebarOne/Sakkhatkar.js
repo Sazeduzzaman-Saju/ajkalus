@@ -1,18 +1,10 @@
 // NewsList.js
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 
 const Sakkhatkar = ({ newsData }) => {
-  const truncateText = (text, wordLimit) => {
-    const words = text.split(" ");
-    return words.length > wordLimit
-      ? words.slice(0, wordLimit).join(" ") + "..."
-      : text;
-  };
-
   return (
     <div className="row">
       {newsData.map((newsItem) => (
@@ -29,13 +21,9 @@ const Sakkhatkar = ({ newsData }) => {
                     height={160}
                   />
                   <div className="card-body">
-                    {/* <h4
-                      className="news-short-brief text-site"
-                      dangerouslySetInnerHTML={{
-                        __html: truncateText(newsItem.news_title, 5),
-                      }}
-                    /> */}
-                    <h5 className="news-short-brief text-site">{newsItem.news_title}</h5>
+                    <h5 className="news-short-brief text-site">
+                      {newsItem.news_title}
+                    </h5>
                   </div>
                 </div>
               </div>

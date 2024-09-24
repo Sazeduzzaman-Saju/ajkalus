@@ -43,7 +43,7 @@ const FeatureSlide = ({ spotListData }) => {
                       {data.news_title.split(" ").slice(0, 8).join(" ")}
                     </div>
                     <div
-                      className="card-text cts-text text-muted pt-0 pt-md-3"
+                      className="card-text cts-text text-muted pt-0 pt-md-4"
                       dangerouslySetInnerHTML={{
                         __html: data.news_short_brief
                           ? data.news_short_brief

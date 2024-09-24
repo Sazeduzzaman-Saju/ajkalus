@@ -21,7 +21,7 @@ const NewsSidebarThree = async () => {
   return (
     <div className="container">
       <div className="shadow-sm mb-4">
-        <SectionHeader title="লাইফস্টাইল || Lifestyle" />
+        <SectionHeader title="লাইফস্টাইল" />
         <LifeStyleNews newsData={newsData} />
       </div>
     </div>

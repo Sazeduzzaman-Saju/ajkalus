@@ -27,7 +27,7 @@ const NewsSidebarTwo = async () => {
 
   return (
     <div className="px-2">
-      <SectionHeader title="খেলার সংবাদ || Sports News" />
+      <SectionHeader title="খেলার সংবাদ" />
       <KhelarSingleNews
         featuredOne={featuredOne}
         featuredTwo={featuredTwo}

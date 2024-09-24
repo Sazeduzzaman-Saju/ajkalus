@@ -22,7 +22,7 @@ a {
 }
 /* Scrool Bar Css */
 body::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0.8em;
 }
 
 body::-webkit-scrollbar-track {

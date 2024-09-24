@@ -61,9 +61,9 @@ export default async function Navbar() {
                     height={80}
                   />
                 </Link>
-                <p className="text-muted">
+                {/* <p className="text-muted">
                   Expires in {remainingDays} day{remainingDays > 1 ? "s" : ""}
-                </p>
+                </p> */}
               </div>
             ) : (
               <>
