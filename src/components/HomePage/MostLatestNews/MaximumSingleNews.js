@@ -24,7 +24,7 @@ const MaximumSingleNews = ({ newsItem }) => {
             <div className="card-body pb-0">
               <h6 className="text-site">{newsItem.news_title}</h6>
               <div className="d-flex justify-content-between align-items-center">
-                <small className="text-site">
+                <small className="text-site fw-bold">
                   {newsItem.category_name_bangla}
                 </small>
                 <small className="bg-white shadow-sm p-1 rounded-3">

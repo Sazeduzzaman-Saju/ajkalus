@@ -1,31 +1,36 @@
-export const filterSidebarAdvertisements = (advertisementList, positions) => {
+// utils/advertisementUtils.js
+
+export const filterValidAdvertisementsSidebar = (advertisementListSidebar, position) => {
   const currentDate = new Date();
 
-  return positions.map((position) => {
-    const filteredAds = advertisementList.filter((ad) => {
-      if (ad.ad_position !== position) return false;
+  return advertisementListSidebar.filter((ad) => {
+    if (ad.ad_position.trim() !== position.trim()) return false;
 
-      const startDate = new Date(ad.start_date);
-      let expirationDate = new Date(startDate);
+    const startDate = new Date(ad.start_date);
+    const duration = ad.duration; // Duration is in weeks
 
-      if (ad.duration === "week") {
-        expirationDate.setDate(startDate.getDate() + 7);
-      } else if (ad.duration === "month") {
-        expirationDate.setMonth(startDate.getMonth() + 1);
-      }
+    // Calculate the expiration date by adding the number of weeks (duration) to the start date
+    let expirationDate = new Date(startDate);
+    expirationDate.setDate(startDate.getDate() + duration * 7);
 
-      return currentDate <= expirationDate; // Only include if not expired
-    });
-
-    // If no valid ads, return a placeholder for that position
-    return filteredAds.length > 0
-      ? filteredAds
-      : [
-          {
-            id: position,
-            ad_banner: "https://ajkal.us/img/ad/",
-            ad_position: position,
-          },
-        ];
+    return currentDate <= expirationDate;
   });
+};
+
+export const calculateRemainingDaysSidebar = (ad) => {
+  if (!ad) return null;
+
+  const currentDate = new Date();
+  const startDate = new Date(ad.start_date);
+
+  // Add the duration (weeks) to the start date
+  let expirationDate = new Date(startDate);
+  expirationDate.setDate(startDate.getDate() + ad.duration * 7);
+
+  // Calculate remaining days until expiration
+  const remainingDays = Math.ceil(
+    (expirationDate - currentDate) / (1000 * 60 * 60 * 24)
+  );
+
+  return remainingDays;
 };

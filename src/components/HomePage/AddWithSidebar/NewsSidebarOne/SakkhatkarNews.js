@@ -28,7 +28,7 @@ const SakkhatkarNews = async () => {
 
   return (
     <div className="container">
-      <SectionHeader title="সাক্ষাৎকার || Interview" />
+      <SectionHeader title="সাক্ষাৎকার" />
       <div className="row">
         <div className="col-xl-6">
           {featured1.length > 0 ? (

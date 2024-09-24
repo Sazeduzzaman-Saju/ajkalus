@@ -2,9 +2,14 @@ import React from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Link from "next/link";
 import advertisementApi from "@/utility/advertisementApi/advertisementApi";
-import { filterSidebarAdvertisements } from "@/utility/advertisementUtils/sidebarAdvertisementUtils";
 import "./sidebar.css";
 import { Image } from "react-bootstrap";
+import {
+  calculateRemainingDaysSidebar,
+  filterValidAdvertisementsSidebar,
+} from "@/utility/advertisementUtils/sidebarAdvertisementUtils";
+import FallbackImages from "@/utility/FallBackImage/FallBackImages";
+import FacebookEmbedCode from "./FacebookEmbedCode";
 
 export async function generateStaticParams() {
   let sidebarAdvertisementData = await advertisementApi();
@@ -14,22 +19,47 @@ export async function generateStaticParams() {
 export default async function Sidebar() {
   let sidebarAdvertisementData = await advertisementApi();
 
-  // Define sidebar positions dynamically
-  const numberOfPositions = 7; // Change this to the desired number of positions
-  const positions = Array.from(
-    { length: numberOfPositions },
-    (_, i) => `Sidebar${i + 1}`
-  );
+  // Specify the positions you want to filter for
+  const positions = [
+    "SideBar1",
+    "Sidebar2",
+    "Sidebar3",
+    "Sidebar4",
+    "Sidebar5",
+    "Sidebar6",
+  ];
+  const validAdvertisements = [];
 
-  const validAdvertisements = filterSidebarAdvertisements(
-    sidebarAdvertisementData,
-    positions
-  );
+  // Collect valid advertisements for each position
+  for (const position of positions) {
+    const adsForPosition = filterValidAdvertisementsSidebar(
+      sidebarAdvertisementData,
+      position
+    );
+    validAdvertisements.push(...adsForPosition);
+  }
+
 
   return (
     <div>
       <SectionHeader title="বিজ্ঞাপন কর্নার।" />
       <div className="row justify-content-center mx-auto mb-3">
+        <div className="col-xl-12 px-0">
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/_U_TCak8ovo?si=5tMu37JIQeVDmfIK" // Wrap the URL in quotes
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div className="col-xl-12 ps-0">
+          <div className="my-4">
+            <FacebookEmbedCode />
+          </div>
+        </div>
         <div className="col-xl-12 px-0">
           <div className="">
             <div className="card border-0">
@@ -117,56 +147,59 @@ export default async function Sidebar() {
           </div>
         </div>
         <div className="col-lg-12 px-0 mt-4">
-            <div
-              className="card"
-              style={{ height: "550", overflow: "hidden" }}
-            >
-              <h3 className="text-center pt-3">
-                আজকাল <span className="epaper_text">ই</span> পেপার
-              </h3>
-              <Link href={'/epaper'}>
-                <Image
-                  className="img-fluid"
-                  src="https://ajkal.us/img/epaper/17139742637427437.jpg"
-                  alt="E-paper Link"
-                  title="Prayer Time Shedule"
-                />
-              </Link>
-            </div>
+          <div className="card" style={{ height: "550", overflow: "hidden" }}>
+            <h3 className="text-center pt-3">
+              আজকাল <span className="epaper_text">ই</span> পেপার
+            </h3>
+            <Link href={"/epaper"}>
+              <Image
+                className="img-fluid"
+                src="https://ajkal.us/img/epaper/17139742637427437.jpg"
+                alt="E-paper Link"
+                title="Prayer Time Shedule"
+              />
+            </Link>
           </div>
-
+        </div>
         <div className="col-xl-12 px-0">
           {/* Sidebar advertisement start */}
-          {validAdvertisements.map((ad, index) => {
-            const expirationDate = new Date(ad.start_date);
-            expirationDate.setDate(
-              expirationDate.getDate() + (ad.duration === "week" ? 7 : 30)
-            ); // Adjust based on duration
-            const isExpired = new Date() > expirationDate;
-
-            return (
-              <div key={ad.id} className="advertisement-container">
-                {isExpired ? (
-                  <Image
-                    src={`https://ajkal.us/img/ad/${ad.ad_banner}`} // Fallback image for expired ads
-                    alt="Fallback Advertisement"
-                    className="img-fluid w-100 mx-auto"
-                    style={{ height: "80px" }} // Ensure height is appropriate
-                    title="Advertisement expired"
-                  />
-                ) : (
-                  <Image
-                    src={"https://i.ibb.co.com/qFSNHWt/ad-placeholder-2.jpg"}
-                    alt={"Advertisement asdasdasd"}
-                    className="img-fluid mt-2 pt-1"
-                  />
-                )}
-                <p className="advertisement-text">
-                  {ad.ad_position} {isExpired && <span>(Expired)</span>}
-                </p>
-              </div>
-            );
-          })}
+          <div className="mt-4">
+            {validAdvertisements.length > 0 ? (
+              validAdvertisements.map((advertisementData) => {
+                const remainingDays =
+                  calculateRemainingDaysSidebar(advertisementData);
+                return (
+                  <div className="mx-auto mb-4" key={advertisementData.id}>
+                    <Link href={advertisementData.ad_link} target="_blank">
+                      <Image
+                        className="img-fluid"
+                        src={`https://ajkal.us/img/ad/${advertisementData.ad_banner}`}
+                        alt={advertisementData.ad_link}
+                        title={advertisementData.ad_link}
+                        width={867}
+                        height={80}
+                      />
+                    </Link>
+                    {/* Uncomment if you want to show remaining days */}
+                    {/* <p className="text-muted">
+                      Expires in {remainingDays} day
+                      {remainingDays > 1 ? "s" : ""}
+                      {advertisementData.ad_position}
+                    </p> */}
+                  </div>
+                );
+              })
+            ) : (
+              <FallbackImages
+                src={`https://ajkal.us/img/settings/ad-placeholder.jpg`} // Replace with your fallback image URL
+                alt="Fallback Advertisement"
+                width={867}
+                className="img-fluid w-100 mx-auto text-center"
+                height={80}
+                title="Advertisement expired"
+              />
+            )}
+          </div>
           {/* Sidebar advertisement end */}
         </div>
       </div>

@@ -19,7 +19,7 @@ export async function NewWorkSection() {
 
   return (
     <div className="container">
-      <SectionHeader title="নিউইয়র্ক || New York" />
+      <SectionHeader title="নিউইয়র্ক" />
       <NewWorkNews NewWorkNewsData={NewWorkNewsData} />
     </div>
   );

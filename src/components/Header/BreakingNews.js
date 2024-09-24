@@ -1,34 +1,14 @@
-"use client";
-import   { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
-import axios from "axios";
 import Link from "next/link";
+import breakingNewsCatNewsApi from "@/utility/categoryApi/breakingNewsApi";
 
-const BreakingNews = () => {
-  const [breakingNews, setBreakingNews] = useState([]);
-  const url = "https://backoffice.ajkal.us/breaking-news";
+export async function generateStaticParams() {
+  let breakingNewsData = await breakingNewsCatNewsApi();
+  return breakingNewsData;
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(url);
-        if (Array.isArray(response.data)) {
-          setBreakingNews(response.data.slice(0, 10)); // Limit to 10 items
-        } else if (Array.isArray(response.data.data)) {
-          setBreakingNews(response.data.data.slice(0, 12)); // Limit to 12 items if nested
-        } else {
-          console.error(
-            "Invalid data structure in API response:",
-            response.data
-          );
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+export default async function BreakingNews() {
+  let breakingNews = await breakingNewsCatNewsApi();
 
   return (
     <div className="container-fluid bg-light">
@@ -72,6 +52,4 @@ const BreakingNews = () => {
       </div>
     </div>
   );
-};
-
-export default BreakingNews;
+}
