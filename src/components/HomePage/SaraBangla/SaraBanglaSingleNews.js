@@ -1,4 +1,4 @@
-import formatDateToBengali from "@/utility/AdorshoLipi/Time/formatDateToBengali";
+import formatDate from "@/utility/AdorshoLipi/Time/fornatDate";
 import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 import React from "react";
 
@@ -11,8 +11,6 @@ const SaraBanglaSingleNews = ({ sarabanglaNewsData }) => {
     (news) => news.is_featured === 2
   );
 
-  // Log the filtered news for debugging
-  console.log(sarabanglaNewsFeature, "Featured News");
 
   return (
     <div>
@@ -45,9 +43,7 @@ const SaraBanglaSingleNews = ({ sarabanglaNewsData }) => {
                               </small>
                               <small>
                                 <small className="text-site">
-                                  {formatDateToBengali(
-                                    news.news_time.slice(0, 10)
-                                  )}
+                                  {formatDate(news.news_time.slice(0, 10))}
                                 </small>
                               </small>
                             </div>

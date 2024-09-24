@@ -10,7 +10,9 @@ const fetchCategoryNews = async (categoryId) => {
 
     // Check if the fetch was successful (HTTP status code 200)
     if (!response.ok) {
-      throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+      throw new Error(
+        `Failed to fetch data: ${response.status} ${response.statusText}`
+      );
     }
     const data = await response.json();
     return data.data || [];
@@ -31,19 +33,19 @@ const SidebarSectionOne = async () => {
         <div className="row">
           {/* First column (data12) */}
           <div className="col-xl-4">
-            <SectionHeader title="রাজনীতি || Politics" className="mb-0" />
+            <SectionHeader title="রাজনীতি" className="mb-0" />
             <RajnitiNews data12={data12} />
           </div>
 
           {/* Second column (data17) */}
           <div className="col-xl-4">
-            <SectionHeader title="অন্যান্য || Others" className="mb-0" />
+            <SectionHeader title="অন্যান্য" className="mb-0" />
             <OnannoNews data17={data17} />
           </div>
 
           {/* Third column (data13) */}
           <div className="col-xl-4">
-            <SectionHeader title="কমিউনিটি || Community " className="mb-0" />
+            <SectionHeader title="কমিউনিটি" className="mb-0" />
             <ComunityNews data13={data13} />
           </div>
         </div>

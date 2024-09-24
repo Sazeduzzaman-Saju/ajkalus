@@ -1,66 +1,36 @@
-"use client";
-import { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 import MenuDropdown from "./MenuDropdown";
+import categoryAllNewsApi from "@/utility/categoryApi/allCategoryNewsApi";
 
-const Categories = () => {
-  const [navLinks, setNavLinks] = useState([]);
-  const [extraNav, setExtraNav] = useState([]);
+export async function generateStaticParams() {
+  let allCategoryData = await categoryAllNewsApi();
+  return allCategoryData;
+}
 
-  // Fetch navigation links from the API
-  useEffect(() => {
-    const fetchNavLinks = async () => {
-      try {
-        const response = await axios.get(
-          "https://backoffice.ajkal.us/news-category"
-        );
+export default async function Categories() {
+  let allCategoryData = await categoryAllNewsApi();
 
-        if (Array.isArray(response.data)) {
-          const navLinksData = response.data.slice(0, 10);
-          setNavLinks(navLinksData);
-          setExtraNav(response.data.slice(10));
-        } else if (Array.isArray(response.data.data)) {
-          const navLinksData = response.data.data.slice(0, 10);
-          setNavLinks(navLinksData);
-          setExtraNav(response.data.data.slice(10));
-        } else {
-          console.error(
-            "Invalid data structure in API response:",
-            response.data
-          );
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchNavLinks();
-  }, []);
+  // Extract navLinks and extraNav from allCategoryData
+  const navLinks = allCategoryData.slice(0, 10); // First 10 items
+  const extraNav = allCategoryData.slice(10); // Remaining items
 
   return (
-    <div className="container-fluid main-menu mobile-none sticky-top ">
+    <div className="container-fluid main-menu mobile-none sticky-top">
       <div className="container">
         <div className="d-flex justify-content-center">
           <ul className="navbar-nav mx-auto d-flex">
-            {navLinks.map((link) => {
-              // const parentCategory = "news"; // You can dynamically set this based on the category if needed
-              // const url = link.name.toLowerCase();
-              return (
-                <li key={link.id} className="nav-item menu-border menu-specing">
-                  <Link href={`/${link.name}/${link.id}`} passHref>
-                    {/* <div>{`/${link.name}/${link.id}`}</div> */}
-                    <div className="nav-link navlinks">{link.name_bangla}</div>
-                  </Link>
-                </li>
-              );
-            })}
+            {navLinks.map((link) => (
+              <li key={link.id} className="nav-item menu-border menu-specing">
+                <Link href={`/${link.name}/${link.id}`} passHref>
+                  <div className="nav-link navlinks">{link.name_bangla}</div>
+                </Link>
+              </li>
+            ))}
             <MenuDropdown extraNav={extraNav} />
           </ul>
         </div>
       </div>
     </div>
   );
-};
-
-export default Categories;
+}

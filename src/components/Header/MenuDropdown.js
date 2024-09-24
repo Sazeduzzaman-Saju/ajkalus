@@ -1,3 +1,5 @@
+"use client"; // Add this line to ensure it's a client component
+
 import Dropdown from "react-bootstrap/Dropdown";
 import Link from "next/link";
 import "./Header.css";
@@ -10,7 +12,7 @@ function MenuDropdown({ extraNav }) {
         variant="success"
         id="dropdown-basic"
       >
-        অন্যান্য 
+        অন্যান্য
       </Dropdown.Toggle>
 
       <Dropdown.Menu>

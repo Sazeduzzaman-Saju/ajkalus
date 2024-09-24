@@ -17,7 +17,7 @@ const DhormoSingleNews = ({ dhormoData }) => {
 
   return (
     <div>
-      <SectionHeader title="ধর্ম || Religion News" />
+      <SectionHeader title="ধর্ম" />
       <div className="row">
         {/* Non-feature news */}
         <div className="col-xl-3">

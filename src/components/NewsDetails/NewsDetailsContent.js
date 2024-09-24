@@ -27,8 +27,6 @@ export default async function NewsDetailsContent({ singleNewsDetails }) {
   // Fetch the advertisement data
   let advertisementList = await advertisementApi();
 
-  // Log the full advertisement list for debugging
-  console.log(advertisementList, "Complete Advertisement List");
 
   // Specify the position you want to filter for
   const position = "NewsDetailsInside"; // This can be changed based on where you're displaying ads
@@ -39,15 +37,11 @@ export default async function NewsDetailsContent({ singleNewsDetails }) {
     position
   );
 
-  // Log the filtered advertisements for debugging
-  console.log(validAdvertisements, "Filtered Valid Advertisements");
 
   // Extract the first valid advertisement (if any)
   const advertisementData =
     validAdvertisements.length > 0 ? validAdvertisements[0] : null;
 
-  // Log the selected advertisement data for debugging
-  console.log(advertisementData, "Selected Advertisement Data");
 
   // Calculate the remaining days for the ad expiry
   const remainingDays = advertisementData
