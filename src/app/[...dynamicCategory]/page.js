@@ -18,7 +18,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   // console.log(searchParams, previousImages, "dynamic page")
 
-
   return {
     title: `${dynamicCategoryName}`,
     description:
@@ -27,7 +26,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       "আজকাল, খবর, আপডেট, বাংলাদেশ, বিশ্বসংবাদ, খেলাধুলা, রাজনীতি, বিনোদন, স্বাস্থ্য, লাইফস্টাইল",
     openGraph: {
       type: "website",
-      url: "https://www.ajkal.us/contact",
+      url: `https://www.ajkal.us/${dynamicCategoryName}`,
       title: "সাপ্তাহিক আজকাল :: Weekly Ajkal",
       description:
         "বাংলাদেশ ও বিশ্বসংবাদ সম্পর্কে সর্বশেষ আপডেট জানুন। এখানে পাবেন খেলাধুলা, রাজনীতি, চাকরি, বিনোদন, স্বাস্থ্য, লাইফস্টাইল এবং আরও অনেক কিছু।",
@@ -49,7 +48,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "বাংলাদেশ ও বিশ্বসংবাদ সম্পর্কে সর্বশেষ আপডেট জানুন। এখানে পাবেন খেলাধুলা, রাজনীতি, চাকরি, বিনোদন, স্বাস্থ্য, লাইফস্টাইল এবং আরও অনেক কিছু।",
       images: ["https://ajkal.us/img/settings/placeholder.jpg"],
     },
-    canonicalUrl: "https://www.ajkal.us/contact", // Ensure this is the correct URL
+    canonicalUrl: `https://www.ajkal.us/${dynamicCategoryName}`, // Ensure this is the correct URL
   }
 }
 
