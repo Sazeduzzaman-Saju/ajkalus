@@ -23,8 +23,8 @@ const DhormoSingleNews = ({ dhormoData }) => {
         <div className="col-xl-3">
           {dhormoFeature.map((items, index) => (
             <div key={index}>
-              <div class="card border-0 shadow-sm p-0 mb-2 dhormo-non-feature">
-                <div class="card-body p-0">
+              <div className="card border-0 shadow-sm p-0 mb-2 dhormo-non-feature">
+                <div className="card-body p-0">
                   <FallbackImages
                     src={`https://ajkal.us/img/news/${items.title_img}`}
                     alt="Card Image"
@@ -44,8 +44,8 @@ const DhormoSingleNews = ({ dhormoData }) => {
         <div className="col-xl-6">
           {dhormoMainFeature.map((items, index) => (
             <div key={index}>
-              <div class="card border-0 shadow-sm p-0 dhormo-feature">
-                <div class="card-body p-0">
+              <div className="card border-0 shadow-sm p-0 dhormo-feature">
+                <div className="card-body p-0">
                   <FallbackImages
                     src={`https://ajkal.us/img/news/${items.title_img}`}
                     alt="Card Image"
@@ -71,8 +71,8 @@ const DhormoSingleNews = ({ dhormoData }) => {
         <div className="col-xl-3">
           {dhormoFeatureTwo.map((items, index) => (
             <div key={index}>
-              <div class="card border-0 shadow-sm p-0 mb-2  dhormo-non-feature">
-                <div class="card-body p-0">
+              <div className="card border-0 shadow-sm p-0 mb-2  dhormo-non-feature">
+                <div className="card-body p-0">
                   <FallbackImages
                     src={`https://ajkal.us/img/news/${items.title_img}`}
                     alt="Card Image"

@@ -36,8 +36,8 @@ const ProbashSingleNews = ({ probashData }) => {
           ))}
         </div>
         <div className="col-xl-8">
-          <div class="row">
-            <div class="col">
+          <div className="row">
+            <div className="col">
               {probashDataNonFeature.slice(0, 2).map((item, index) => (
                 <div
                   className="card text-start mb-3 p-0 shadow-sm border-0 probash-nonfeature"
@@ -56,7 +56,7 @@ const ProbashSingleNews = ({ probashData }) => {
                 </div>
               ))}
             </div>
-            <div class="col">
+            <div className="col">
               {probashDataNonFeature.slice(2, 4).map((item, index) => (
                 <div
                   className="card text-start p-0 shadow-sm border-0 mb-3 probash-nonfeature"
@@ -75,7 +75,7 @@ const ProbashSingleNews = ({ probashData }) => {
                 </div>
               ))}
             </div>
-            <div class="col">
+            <div className="col">
               {probashDataNonFeature.slice(4, 6).map((item, index) => (
                 <div
                   className="card text-start p-0 shadow-sm border-0 mb-3 probash-nonfeature"

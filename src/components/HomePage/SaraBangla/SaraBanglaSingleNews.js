@@ -18,7 +18,7 @@ const SaraBanglaSingleNews = ({ sarabanglaNewsData }) => {
         <div className="row">
           {/* Column for non-featured news (is_featured === 2) */}
           <div className="col-lg-6">
-            <div class="row">
+            <div className="row">
               {sarabanglaNewsNonFeature.length > 0 ? (
                 sarabanglaNewsNonFeature.slice(0, 5).map((news) => (
                   <div className="col-md-12" key={news.id}>
@@ -63,8 +63,8 @@ const SaraBanglaSingleNews = ({ sarabanglaNewsData }) => {
             {sarabanglaNewsFeature.length > 0 ? (
               sarabanglaNewsFeature.slice(0, 1).map((news) => (
                 <div key={news.id} className="featured-news-item">
-                  <div class="card border-0 shadow-sm">
-                    <div class="card-body p-0">
+                  <div className="card border-0 shadow-sm">
+                    <div className="card-body p-0">
                       <FallbackImages
                         src={`https://ajkal.us/img/news/${news.title_img}`}
                         alt="Card Image"

@@ -20,8 +20,8 @@ const SaraBisshoSingleNews = ({ saraBisshoNewsData }) => {
             {saraBisshoNewsFeature.length > 0 ? (
               saraBisshoNewsFeature.slice(0, 1).map((news) => (
                 <div key={news.id} className="featured-news-item">
-                  <div class="card border-0 shadow-sm">
-                    <div class="card-body p-0">
+                  <div className="card border-0 shadow-sm">
+                    <div className="card-body p-0">
                       <FallbackImages
                         src={`https://ajkal.us/img/news/${news.title_img}`}
                         alt="Card Image"
@@ -46,7 +46,7 @@ const SaraBisshoSingleNews = ({ saraBisshoNewsData }) => {
           </div>
           {/* Column for non-featured news (is_featured === 2) */}
           <div className="col-lg-7">
-            <div class="row">
+            <div className="row">
               {saraBisshoNewsNonFeature.length > 0 ? (
                 saraBisshoNewsNonFeature.slice(0, 5).map((news) => (
                   <div className="col-md-12" key={news.id}>
