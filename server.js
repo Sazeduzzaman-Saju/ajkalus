@@ -22,3 +22,7 @@ app.prepare().then(() => {
     }`
   )
 })
+
+// "start": "NODE_ENV=production node server.js",
+
+// "start": "next start",
