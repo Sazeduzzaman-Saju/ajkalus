@@ -15,7 +15,7 @@ const Sakkhatkar = ({ newsData }) => {
                 <div className="card-body p-0">
                   <FallbackImages
                     src={`https://ajkal.us/img/news/${newsItem.title_img}`}
-                    alt="Card Image"
+                    alt={newsItem.title_img}
                     className="rounded-3"
                     width={600}
                     height={160}

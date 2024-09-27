@@ -9,7 +9,7 @@ import {
   filterValidAdvertisementsSidebar,
 } from "@/utility/advertisementUtils/sidebarAdvertisementUtils";
 import FallbackImages from "@/utility/FallBackImage/FallBackImages";
-import FacebookEmbedCode from "./FacebookEmbedCode";
+// import FacebookEmbedCode from "./FacebookEmbedCode";
 
 export async function generateStaticParams() {
   let sidebarAdvertisementData = await advertisementApi();
@@ -44,22 +44,12 @@ export default async function DetailsSidebar() {
     <div>
       <SectionHeader title="বিজ্ঞাপন কর্নার।" />
       <div className="row justify-content-center mx-auto mb-3">
-        <div className="col-xl-12 px-0">
-          <iframe
-            width="100%"
-            height="300"
-            src="https://www.youtube.com/embed/_U_TCak8ovo?si=5tMu37JIQeVDmfIK" // Wrap the URL in quotes
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-        <div className="col-xl-12 ps-0">
+
+        {/* <div className="col-xl-12 ps-0">
           <div className="my-4">
             <FacebookEmbedCode />
           </div>
-        </div>
+        </div> */}
         <div className="col-xl-12 px-0">
           <div className="">
             <div className="card border-0">
@@ -146,21 +136,6 @@ export default async function DetailsSidebar() {
             </div>
           </div>
         </div>
-        <div className="col-lg-12 px-0 mt-4">
-          <div className="card" style={{ height: "550", overflow: "hidden" }}>
-            <h3 className="text-center pt-3">
-              আজকাল <span className="epaper_text">ই</span> পেপার
-            </h3>
-            <Link href={"/epaper"}>
-              <Image
-                className="img-fluid"
-                src="https://ajkal.us/img/epaper/17139742637427437.jpg"
-                alt="E-paper Link"
-                title="Prayer Time Shedule"
-              />
-            </Link>
-          </div>
-        </div>
         <div className="col-xl-12 px-0">
           {/* Sidebar advertisement start */}
           <div className="mt-4">
@@ -201,6 +176,17 @@ export default async function DetailsSidebar() {
             )}
           </div>
           {/* Sidebar advertisement end */}
+        </div>
+        <div className="col-xl-12 px-0">
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/_U_TCak8ovo?si=5tMu37JIQeVDmfIK" // Wrap the URL in quotes
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>

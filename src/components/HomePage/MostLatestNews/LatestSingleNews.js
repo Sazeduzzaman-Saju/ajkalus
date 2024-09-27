@@ -15,7 +15,7 @@ const LatestSingleNews = ({ newsItem }) => {
       <Link href={`/news-detail/${newsItem?.id}`}>
         <Image
           src={`https://ajkal.us/img/news/${newsItem.title_img}`}
-          alt="News"
+          alt={newsItem.title_img}
           className="card-img-top"
           width={600}
           height={300}

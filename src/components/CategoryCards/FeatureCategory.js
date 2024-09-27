@@ -1,8 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import './CategoryCards.css'
+import "./CategoryCards.css";
 import Skeleton from "react-loading-skeleton"; // Import the Skeleton component
 import { Image } from "react-bootstrap";
+import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 
 const FeatureCategory = ({
   nonFeaturedItemsSliced,
@@ -23,10 +24,13 @@ const FeatureCategory = ({
         ) : latestFeaturedItem ? (
           <div className="card border-0 shadow-sm single-category-feature">
             <Link href={`/news-detail/${latestFeaturedItem?.id}`}>
-              <Image
-                src={`https://ajkal.us/img/news/${latestFeaturedItem.title_img}`}
-                className="img-fluid"
-                alt="Category Feature"
+              <FallbackImages
+                src={`https://ajkal.us/img/news/${latestFeaturedItem.title_img}`} // Replace with your fallback image URL
+                alt={latestFeaturedItem.title_img}
+                width={867}
+                className="img-fluid w-100 mx-auto text-center"
+                height={340}
+                title="Advertisement expired"
               />
               <div className="card-body feature-info">
                 <h4 className="card-title">{latestFeaturedItem?.news_title}</h4>
@@ -60,7 +64,7 @@ const FeatureCategory = ({
                       width={300}
                       height={300}
                       className="img-fluid single-category-non-img"
-                      alt="Category Feature"
+                      alt={item.title_img}
                     />
                     <div className="card-body">
                       <h6 className="text-site">{item?.news_title}</h6>

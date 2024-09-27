@@ -61,7 +61,7 @@ const FeatureSlide = ({ spotListData }) => {
                   </div>
                   <Image
                     src={`https://ajkal.us/img/news/${data.title_img}`}
-                    alt="Card Image"
+                    alt={data.title_img}
                     title="Card Image"
                     className="card-img-top rounded-0 custom-class rounded-2"
                     width={1920}

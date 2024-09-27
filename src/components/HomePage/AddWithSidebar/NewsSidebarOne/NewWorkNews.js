@@ -14,7 +14,7 @@ const NewWorkNews = ({ NewWorkNewsData = [] }) => {
               <div className="card border-0 shadow-sm news-short-brief-newwork">
                 <FallbackImages
                   src={`https://ajkal.us/img/news/${newsItem.title_img}`}
-                  alt="Card Image"
+                  alt={newsItem.title_img}
                   className="rounded-3"
                   width={700}
                   height={358}

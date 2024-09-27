@@ -1,15 +1,17 @@
 import Head from "next/head";
 
+// TODO: dynamic metadata
+
 export const metadata = {
-  title: "ই পেপার আজকাল :: Weekly Ajkal",
+  title: "ই-পেপার || Weekly Ajkal",
   description:
     "বাংলাদেশ ও বিশ্বসংবাদ সম্পর্কে সর্বশেষ আপডেট জানুন। এখানে পাবেন খেলাধুলা, রাজনীতি, চাকরি, বিনোদন, স্বাস্থ্য, লাইফস্টাইল এবং আরও অনেক কিছু।",
   keywords:
     "আজকাল, খবর, আপডেট, বাংলাদেশ, বিশ্বসংবাদ, খেলাধুলা, রাজনীতি, বিনোদন, স্বাস্থ্য, লাইফস্টাইল",
   openGraph: {
     type: "website",
-    url: "https://www.ajkal.us/contact",
-    title: "ই পেপার আজকাল :: Weekly Ajkal",
+    url: "https://www.ajkal.us/epaper",
+    title: "সাপ্তাহিক আজকাল || Weekly Ajkal",
     description:
       "বাংলাদেশ ও বিশ্বসংবাদ সম্পর্কে সর্বশেষ আপডেট জানুন। এখানে পাবেন খেলাধুলা, রাজনীতি, চাকরি, বিনোদন, স্বাস্থ্য, লাইফস্টাইল এবং আরও অনেক কিছু।",
     images: [
@@ -17,19 +19,30 @@ export const metadata = {
         url: "https://ajkal.us/img/settings/placeholder.jpg",
         width: 1200,
         height: 630,
-        alt: "ই পেপার আজকাল এর চিত্র",
+        alt: "সাপ্তাহিক আজকাল এর চিত্র",
       },
     ],
     site_name: "আজকাল",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ই পেপার আজকাল :: Weekly Ajkal",
+    site: "@weeklyajkal", // Replace with your Twitter handle
+    title: "সাপ্তাহিক আজকাল || Weekly Ajkal",
     description:
       "বাংলাদেশ ও বিশ্বসংবাদ সম্পর্কে সর্বশেষ আপডেট জানুন। এখানে পাবেন খেলাধুলা, রাজনীতি, চাকরি, বিনোদন, স্বাস্থ্য, লাইফস্টাইল এবং আরও অনেক কিছু।",
-    images: ["https://ajkal.us/img/settings/placeholder.jpg"],
+    images: [
+      {
+        url: "https://ajkal.us/img/settings/placeholder.jpg",
+        alt: "সাপ্তাহিক আজকাল এর চিত্র",
+      },
+    ],
   },
-  canonicalUrl: "https://www.ajkal.us/contact", // Ensure this is the correct URL
+  robots: "index, follow",
+  htmlLang: "bn",
+  canonicalUrl: "https://www.ajkal.us/epaper",
+  author: "Weekly Ajkal",
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#ffffff",
 };
 
 export default function Layout({ children }) {

@@ -22,7 +22,7 @@ const SakkhatkarNoFeature = ({ newsData }) => {
                 <div className="card-body p-0 sakkatkar-non-feature">
                   <FallbackImages
                     src={`https://ajkal.us/img/news/${newsItem.title_img}`}
-                    alt="Card Image"
+                    alt={newsItem.title_img}
                     className="rounded-3 img-fluid"
                     width={300}
                     height={100}

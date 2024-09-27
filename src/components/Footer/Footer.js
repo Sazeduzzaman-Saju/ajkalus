@@ -49,10 +49,10 @@ const Footer = () => {
               >
                 <Link href="/">
                   <Image
-                  className="img-fluid"
+                    className="img-fluid"
                     src="https://ajkal.us/img/settings/logo_red.png"
-                    alt="logored"
-                    title="logored"
+                    alt="Brand Logo"
+                    title="Brand Logo"
                   />
                 </Link>
               </div>

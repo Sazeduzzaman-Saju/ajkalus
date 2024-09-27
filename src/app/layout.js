@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import "./globals.css";
-import ScrollToTopButton from "@/utility/ScrollToTopButton/ScrollToTopButton";
+// import ScrollToTopButton from "@/utility/ScrollToTopButton/ScrollToTopButton";
 
 export default function RootLayout({ children }) {
   return (
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        <ScrollToTopButton />
+        {/* <ScrollToTopButton /> */}
         <Footer />
       </body>
     </html>

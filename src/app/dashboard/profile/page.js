@@ -30,7 +30,7 @@ const page = () => {
                         className="rounded-circle mt-1"
                         width={150}
                         height={150}
-                        src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
+                        src="https://ajkal.us/img/settings/placeholder.jpg"
                         alt="Profile"
                         title="profile"
                          

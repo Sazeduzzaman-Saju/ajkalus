@@ -1,5 +1,8 @@
 import advertisementApi from "@/utility/advertisementApi/advertisementApi";
-import { calculateRemainingDays, filterValidAdvertisements } from "@/utility/advertisementUtils/HeaderTop";
+import {
+  calculateRemainingDays,
+  filterValidAdvertisements,
+} from "@/utility/advertisementUtils/HeaderTop";
 import FallbackImages from "@/utility/FallBackImage/FallBackImages";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +17,7 @@ export default async function CategoryAdd() {
   let advertisementList = await advertisementApi();
 
   // Specify the position you want to filter for
-  const position = "BelowNewsCategoryFull"; // Change this for different pages or components
+  const position = "BelowNewsCategory3"; // Change this for different pages or components
   const validAdvertisements = filterValidAdvertisements(
     advertisementList,
     position
@@ -26,7 +29,7 @@ export default async function CategoryAdd() {
   return (
     <div>
       {advertisementData ? (
-        <div className="mx-auto mb-2 mt-4 mb-lg-0">
+        <div className="mx-auto mb-2 mb-lg-0">
           <Link href={advertisementData.ad_link} target="_blank">
             <Image
               className="img-fluid"
@@ -37,12 +40,12 @@ export default async function CategoryAdd() {
               height={80}
             />
           </Link>
-          <p className="text-muted">
-            Expires in {remainingDays} day{remainingDays > 1 ? "s" : ""}
-          </p>
+          {/* <p className="text-muted">
+                  Expires in {remainingDays} day{remainingDays > 1 ? "s" : ""}
+                </p> */}
         </div>
       ) : (
-        <div className="mt-4">
+        <>
           <FallbackImages
             src={`https://ajkal.us/img/settings/ad-placeholder.jpg`} // Replace with your fallback image URL
             alt="Fallback Advertisement"
@@ -51,7 +54,7 @@ export default async function CategoryAdd() {
             height={80}
             title="Advertisement expired"
           />
-        </div>
+        </>
       )}
     </div>
   );

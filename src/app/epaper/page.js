@@ -1,6 +1,6 @@
 import React from "react";
-import SectionHeader from "@/components/SectionHeader/SectionHeader";
-import EpaperFeature from "./EpaperFeature";
+// import SectionHeader from "@/components/SectionHeader/SectionHeader";
+// import EpaperFeature from "./EpaperFeature";
 import SingleEpaper from "@/components/EpaperSlider/SingleEpaper";
 import DetailsSidebar from "@/components/Sidebar/DetailsSidebar";
 
@@ -28,15 +28,15 @@ export default async function page() {
   return (
     <div className="container">
       <div className="row gx-0">
-        <div className="col-md-2">
+        {/* <div className="col-md-1">
           <SectionHeader title="ফিচার" />
           <EpaperFeature />
-        </div>
-        <div className="col-md-8">
+        </div> */}
+        <div className="col-md-9">
           {/* Pass the epaperList as a prop */}
           <SingleEpaper epaperList={epaperList}/>
         </div>
-        <div className="col-md-2">
+        <div className="col-md-3">
           <DetailsSidebar/>
         </div>
       </div>

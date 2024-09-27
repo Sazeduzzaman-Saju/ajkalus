@@ -7,24 +7,24 @@ const EpaperFeature = () => {
       <div className="row justify-content-center mx-auto">
         <div className="col-xl-12 px-0">
           <Image
-            src="https://tpc.googlesyndication.com/simgad/17948013078181412381"
+            src="https://ajkal.us/img/settings/placeholder.jpg"
             alt="Add One"
-            className="img-fluid mt-2 pt-1"
+            className="img-fluid mb-2 pt-1 border"
           ></Image>
           <Image
-            src="https://tpc.googlesyndication.com/simgad/10140310770584896494"
+            src="https://ajkal.us/img/settings/placeholder.jpg"
             alt="Add Two"
-            className="img-fluid mt-2 pt-1"
+            className="img-fluid mb-2 pt-1 border"
           ></Image>
           <Image
-            src="https://tpc.googlesyndication.com/simgad/6267832297710722939"
+            src="https://ajkal.us/img/settings/placeholder.jpg"
             alt="Add Three"
-            className="img-fluid mt-2 pt-1"
+            className="img-fluid mb-2 pt-1 border"
           ></Image>
           <Image
-            src="https://tpc.googlesyndication.com/simgad/12053529903251625672"
+            src="https://ajkal.us/img/settings/placeholder.jpg"
             alt="Add Three"
-            className="img-fluid mt-2 pt-1"
+            className="img-fluid mb-2 pt-1 border"
           ></Image>
         </div>
         <div className="col-xl-12 px-0">

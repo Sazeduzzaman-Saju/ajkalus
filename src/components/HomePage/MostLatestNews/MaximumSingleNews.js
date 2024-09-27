@@ -11,7 +11,7 @@ const MaximumSingleNews = ({ newsItem }) => {
           <div className="col-md-4">
             <Image
               src={`https://ajkal.us/img/news/${newsItem.title_img}`}
-              alt="Viewed News"
+              alt={newsItem.title_img}
               className="rounded-3" // Ensures the image is responsive
               width={130}
               height={110}

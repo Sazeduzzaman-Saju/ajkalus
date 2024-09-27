@@ -25,7 +25,7 @@ const CategoryCards = ({ CategoryList }) => {
           nonFeaturedItemsSliced={nonFeaturedItemsSliced}
           latestFeaturedItem={latestFeaturedItem}
         />
-        <div className="row">
+        <div className="row mt-3">
           <div className="col-xl-12">
             <CategoryAdd />
             <hr />

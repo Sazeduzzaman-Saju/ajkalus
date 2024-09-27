@@ -67,7 +67,8 @@ export default async function NewsDetailsContent({ singleNewsDetails }) {
           <Image
             src={`https://ajkal.us/img/news/${singleNewsDetails.title_img}`}
             className="img-fluid rounded"
-            alt="Category Feature"
+            alt={singleNewsDetails.title_img}
+            title={singleNewsDetails.title_img}
           />
         </div>
         <div className="pt-2">{singleNewsDetails?.news_title} | ফাইল ছবি</div>
