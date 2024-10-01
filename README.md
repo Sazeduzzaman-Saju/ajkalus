@@ -34,3 +34,32 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+## Contributors ✨
+
+<tbody>
+    <table>
+        <tr width="50%" >
+            <td align="center" valign="top" width="50%">
+                <a href="https://github.com/Sazeduzzaman-Saju">
+                    <img src="https://avatars.githubusercontent.com/u/107988750?v=4" width="100px;" alt="Sazeduzzaman Saju"/>
+                    <br />
+                    <sub><b>Sazeduzzaman Saju</b></sub>
+                </a>
+                <br />
+                <a href="https://github.com/Sazeduzzaman-Saju/ajkalus/commits/sharifdevpc?author=Sazeduzzaman-Saju" title="Code">💻</a>
+            </td>
+            <td align="center" valign="top" width="50%">
+                <a href="https://github.com/uforco">
+                    <img src="https://avatars.githubusercontent.com/u/42874313?v=4" width="100px;" alt="Akshay Gore"/>
+                    <br />
+                    <sub><b>MD SHARIF</b></sub>
+                </a>
+                <br />
+                <a href="https://github.com/Sazeduzzaman-Saju/ajkalus/commits/main?author=uforco" title="Code">💻</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
