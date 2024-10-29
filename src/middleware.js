@@ -20,7 +20,7 @@ export function middleware(req) {
 
   return NextResponse.next();
 }
-
+// dharif changind
 // Protect these routes path
 export const config = {
   matcher: ["/dashboard/:path*"],
