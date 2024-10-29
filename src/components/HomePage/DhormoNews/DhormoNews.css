@@ -1,0 +1,14 @@
+.dhormo-feature {
+  height: 468px;
+}
+.dhormo-feature img {
+  width: 100% !important;
+  height: 300px;
+}
+.news-description-box p br {
+  display: none;
+}
+.dhormo-non-feature {
+  height: 230px;
+  max-height: 100%;
+}

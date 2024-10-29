@@ -1,0 +1,20 @@
+/* components/LatestNews/LatestNews.module.css */
+.ltst-news-card {
+  height: 330px !important;
+}
+.ltst-news-card-tlt {
+  height: 70px;
+}
+
+
+.card-img-top {
+  object-fit: cover;
+}
+.sidebar-img {
+  height: 130px;
+  padding-right: 0;
+}
+.sidebar-cont {
+  padding: 8px;
+  padding-left: 0;
+}

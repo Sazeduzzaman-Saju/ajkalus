@@ -1,0 +1,59 @@
+/* Style for the swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  color: var(--secondary, var(--secondary)) !important;
+  background-color: #16558830; /* Default background color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the navigation buttons */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: var(--main); /* Background color on hover */
+}
+
+/* Optional: Ensure the pseudo-element has proper styling if needed */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  padding: 35px;
+  width: unset;
+  color: #eee;
+  font-size: 20px !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: red;
+  width: 25px !important;
+  height: 25px !important;
+  border: 5px solid var(--main) !important;
+  position: relative;
+  top: 6px;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  background: var(--secondary);
+  width: 10px;
+  height: 10px;
+  border: 3px solid transparent;
+}
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 15;
+  position: relative;
+  top: 15px !important;
+  height: 50px;
+}

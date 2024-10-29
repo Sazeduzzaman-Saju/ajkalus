@@ -1,0 +1,87 @@
+/* Font Style Linked */
+@font-face {
+  font-family: "AdorshoLipi";
+  src: url("../utility/AdorshoLipi/AdorshoLipi.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "AdorshoLipi", sans-serif;
+}
+/* Root Style */
+:root {
+  --main: #165588;
+  --secondary: #dc2329;
+  --white: white;
+  --black: black;
+  --red: red;
+}
+
+a {
+  text-decoration: none;
+}
+/* Scrool Bar Css */
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main);
+  outline: 1px solid var(--main);
+}
+a {
+  text-decoration: none !important;
+  color: gray;
+}
+.text-site {
+  color: var(--main);
+}
+.text-site-two {
+  color: var(--secondary);
+}
+p {
+  margin-bottom: 0;
+}
+.submit-btn-one {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #ed1e2b;
+  background-image: linear-gradient(
+    45deg,
+    #165588 0%,
+    #ed1e2b 51%,
+    #165588 100%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.submit-btn-one:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.submit-btn-one:active {
+  transform: scale(0.95);
+}
+@media screen and (max-width: 575.98px) {
+  .mobile-none {
+    display: none !important;
+  }
+}

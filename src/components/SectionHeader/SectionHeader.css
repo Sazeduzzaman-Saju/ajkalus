@@ -1,0 +1,27 @@
+.post-header-box {
+  border-top: 0px solid var(--main);
+}
+
+.post-header-title {
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 18px;
+  background-image: linear-gradient(
+    45deg,
+    #165588 0%,
+    #ed1e2b 51%,
+    #165588 100%
+  );
+  margin: auto;
+  position: relative;
+  top: -20px;
+  font-size: 25px;
+  padding: 10px;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  color: white; /* Ensuring text stays visible over gradient */
+}
+.section-header{
+  font-size: 22px;
+}
